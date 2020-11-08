@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+
+:root{
+  --amarillo: #FDC600;
+}
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color:  #171321;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.happyHanukkahTitle{
+  font-family: 'Rock Salt', sans-serif; 
+  transform: rotate3d(1, 1, 1, -12deg);
+  color: var(--amarillo);
+   animation: neon .40s ease-in-out infinite alternate;
+  -webkit-animation: neon .40s ease-in-out infinite alternate; 
+}
+
+
+.font_ADaughter{
+  font-family: 'Architects Daughter', cursive;
+}
+
+.font_Varela{
+  font-family: 'Varela', sans-serif;
+}
+
+
+/*-- Animation Keyframes --*/
+
+@keyframes neon {
+  from {
+    text-shadow:
+    0 0 3px rgba(202,228,225,0.92),
+    0 0 15px rgba(202,228,225,0.34),
+    0 0 6px rgba(228, 221, 30, 0.52),
+    0 0 9px rgba(228, 221, 30, 0.92),
+    0 0 17px rgba(228, 221, 30, 0.78),
+    0 0 26px rgba(228, 221, 30, 0.92);
+  }
+  to {
+    text-shadow:
+    0 0 3px rgba(202,228,225,0.98),
+    0 0 15px rgba(202,228,225,0.42),
+    0 0 6px rgba(228,221,30,0.58),
+    0 0 11px rgba(228,221,30,0.84),
+    0 0 19px rgba(228,221,30,0.88),
+    0 0 30px rgba(228,221,30,1);
+  }
+}
+
+.important{
+  color: var(--amarillo);
+  font-family: 'Architects Daughter', cursive;
+}

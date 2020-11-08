@@ -1,0 +1,20 @@
+{
+  "name": "hanukkah-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "dev:tailwind" : "tailwindcss build styles/globals.css -o styles/site.css",
+    "predev":"yarn dev:tailwind",
+    "build:tailwind" : "tailwindcss build styles/globals.css -o styles/site.css",
+    "prebuild":"NODE_ENV=production yarn build:tailwind"
+  },
+  "dependencies": {
+    "next": "10.0.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "tailwindcss": "^1.9.6"
+  }
+}
