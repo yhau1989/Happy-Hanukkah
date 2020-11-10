@@ -39,9 +39,9 @@ export default function Home() {
 
       {
         userStatus === false && (<div className={styles.container}> )
-          <div className="flex flex-col pt-10">
-        <span className="happyHanukkahTitle pl-10 text-4xl">Happy</span>
-        <span className="happyHanukkahTitle text-6xl">Hanukkah</span>
+          <div className="flex flex-col pt-10 happyHanukkahTitle">
+        <span className="pl-10 text-4xl">Happy</span>
+        <span className="text-6xl">Hanukkah</span>
       </div>
 
       <div className="w-full sm:w-auto flex-none flex flex-col-reverse sm:flex-row sm:items-start space-y-3 space-y-reverse sm:space-y-0 sm:space-x-4 mt-10 mx-auto xl:mx-0 p-20">
