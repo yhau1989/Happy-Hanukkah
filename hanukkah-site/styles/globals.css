@@ -38,6 +38,13 @@ a {
   -webkit-animation: neon .40s ease-in-out infinite alternate; 
 }
 
+.hannukia-fire{
+   fill: var(--amarillo);
+   filter: url('#prefix__blur-filter');
+   animation: neonFire .40s ease-in-out infinite alternate;
+   -webkit-animation: neonFire .40s ease-in-out infinite alternate;
+   -webkit-filter: url('#prefix__blur-filter'); 
+}
 
 .font_ADaughter{
   font-family: 'Architects Daughter', cursive;
@@ -45,6 +52,14 @@ a {
 
 .font_Varela{
   font-family: 'Varela', sans-serif;
+}
+
+.font_ADaughter-title{
+  font-family: 'Architects Daughter', cursive;
+  color: var(--amarillo);
+   /* animation: neon .40s ease-in-out infinite alternate;
+  -webkit-animation: neon .40s ease-in-out infinite alternate;  */
+
 }
 
 
@@ -69,6 +84,15 @@ a {
     0 0 19px rgba(228,221,30,0.88),
     0 0 30px rgba(228,221,30,1);
   }
+}
+
+@keyframes neonFire {
+  0% {
+		stroke-dashoffset: 0;
+	} 
+	100% {
+		stroke-dashoffset: 1000;
+	}
 }
 
 .important{

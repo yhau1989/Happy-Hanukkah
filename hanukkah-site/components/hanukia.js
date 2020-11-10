@@ -1,17 +1,37 @@
-import * as React from "react"
+import React, { useState } from "react"
+import Flame from "./fire/flame"
+
+
 export default function Hanukia(props) {
-  return (
-    <svg
+
+  const flame1 = useState('prefix__st18')
+  const flame2 = useState('prefix__st18')
+  const flame3 = useState('prefix__st18')
+  const flame4 = useState('prefix__st18')
+  const flameCentral = useState('prefix__st18')
+  const flame5 = useState('prefix__st18')
+  const flame6 = useState('prefix__st18')
+  const flame7 = useState('prefix__st18')
+  const flame8 = useState('prefix__st18')
+
+  const changeStatusFlame = (stateValue, stateFunction) => {
+    stateFunction((stateValue == "prefix__st18") ? "prefix__on" : "prefix__st18")
+  }
+  
+
+
+  return (<svg
       id="prefix__Capa_1"
       x={0}
       y={0}
       viewBox="0 0 3000.3 2003"
       xmlSpace="preserve"
+      enableBackground="new 0 0 3000.3 2003"
       {...props}
     >
       <style>
         {
-          ".prefix__st0{fill:#e2e2e2}.prefix__st1{fill:#359ab2}.prefix__st5{fill:#2c4e8e}.prefix__st8{fill:#f0603a}.prefix__st9{fill:#fcb817}.prefix__st10{fill:#96ad3b}.prefix__st11{fill:#607fbf}.prefix__st13{fill:#e04b2d}.prefix__st14{fill:#d79829}.prefix__st18{fill:#f6921e}"
+          ".prefix__st0{fill:#e2e2e2}.prefix__st1{fill:#359ab2}.prefix__st5{fill:#2c4e8e}.prefix__st8{fill:#f0603a}.prefix__st9{fill:#fcb817}.prefix__st10{fill:#96ad3b}.prefix__st11{fill:#607fbf}.prefix__st13{fill:#e04b2d}.prefix__st14{fill:#d79829}.prefix__st18{fill:#f6921e38}.prefix__on{fill:#f6921e}"
         }
       </style>
       <g id="prefix__Adorno1">
@@ -133,52 +153,63 @@ export default function Hanukia(props) {
           />
         </g>
       </g>
+      
+      <g id="prefix__Fuego1" onClick={() => changeStatusFlame(flame1[0], flame1[1])}>
+        <path
+          className={flame1[0]}
+          d="M980.6 300.1c0 29.8-21.8 53.9-48.6 53.9s-48.6-24.1-48.6-53.9c0-29.8 48.6-112.3 48.6-112.3s48.6 82.5 48.6 112.3z"
+        />
+      </g>
       <path
-        className="prefix__st18"
-        d="M980.6 300.1c0 29.8-21.8 53.9-48.6 53.9s-48.6-24.1-48.6-53.9c0-29.8 48.6-112.3 48.6-112.3s48.6 82.5 48.6 112.3z"
-        id="prefix__Fuego1"
-      />
-      <path
-        className="prefix__st18"
+        className={flame2[0]}
         d="M1123.9 300.1c0 29.8-21.8 53.9-48.6 53.9s-48.6-24.1-48.6-53.9c0-29.8 48.6-112.3 48.6-112.3s48.6 82.5 48.6 112.3z"
         id="prefix__Fuego2"
+        onClick={() => changeStatusFlame(flame2[0], flame2[1])}
       />
       <path
-        className="prefix__st18"
+        className={flame3[0]}
         d="M1267.3 300.1c0 29.8-21.8 53.9-48.6 53.9s-48.6-24.1-48.6-53.9c0-29.8 48.6-112.3 48.6-112.3s48.6 82.5 48.6 112.3z"
         id="prefix__Fuego3"
+        onClick={() => changeStatusFlame(flame3[0], flame3[1])}
       />
       <path
-        className="prefix__st18"
+        className={flame4[0]}
         d="M1410.6 300.1c0 29.8-21.8 53.9-48.6 53.9s-48.6-24.1-48.6-53.9c0-29.8 48.6-112.3 48.6-112.3s48.6 82.5 48.6 112.3z"
         id="prefix__Fuego4"
+        onClick={() => changeStatusFlame(flame4[0], flame4[1])}
       />
       <path
-        className="prefix__st18"
+        className={flameCentral[0]}
         d="M1553.9 300.1c0 29.8-21.8 53.9-48.6 53.9s-48.6-24.1-48.6-53.9c0-29.8 48.6-112.3 48.6-112.3s48.6 82.5 48.6 112.3z"
         id="prefix__Fuego5"
+        onClick={() => changeStatusFlame(flameCentral[0], flameCentral[1])}
       />
       <path
-        className="prefix__st18"
+        className={flame5[0]}
         d="M1697.3 300.1c0 29.8-21.8 53.9-48.6 53.9s-48.6-24.1-48.6-53.9c0-29.8 48.6-112.3 48.6-112.3s48.6 82.5 48.6 112.3z"
         id="prefix__Fuego6"
+        onClick={() => changeStatusFlame(flame5[0], flame5[1])}
       />
       <path
-        className="prefix__st18"
+        className={flame6[0]}
         d="M1840.6 300.1c0 29.8-21.8 53.9-48.6 53.9s-48.6-24.1-48.6-53.9c0-29.8 48.6-112.3 48.6-112.3s48.6 82.5 48.6 112.3z"
         id="prefix__Fuego7"
+        onClick={() => changeStatusFlame(flame6[0], flame6[1])}
       />
       <path
-        className="prefix__st18"
+        className={flame7[0]}
         d="M1983.9 300.1c0 29.8-21.8 53.9-48.6 53.9s-48.6-24.1-48.6-53.9c0-29.8 48.6-112.3 48.6-112.3s48.6 82.5 48.6 112.3z"
         id="prefix__Fuego8"
+        onClick={() => changeStatusFlame(flame7[0], flame7[1])}
       />
       <path
-        className="prefix__st18"
+        className={flame8[0]}
         d="M2127.3 300.1c0 29.8-21.8 53.9-48.6 53.9-26.9 0-48.6-24.1-48.6-53.9 0-29.8 48.6-112.3 48.6-112.3s48.6 82.5 48.6 112.3z"
         id="prefix__Fuego9"
+        onClick={() => changeStatusFlame(flame8[0], flame8[1])}
       />
     </svg>
   )
 }
+
 
