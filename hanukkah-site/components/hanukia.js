@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import Flame from "./fire/flame"
+import { useState } from "react"
 
 
 export default function Hanukia(props) {
