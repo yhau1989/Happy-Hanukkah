@@ -33,10 +33,8 @@ export default function Home() {
 
       {userStatus === null && <Cargando />}
 
-      {userStatus === false && (
-        <div className={styles.container}>
-          {" "}
-          )
+      {userStatus === false && <div className={styles.container}>
+          
           <div className="flex flex-col pt-10 happyHanukkahTitle">
             <span className="pl-10 text-4xl">Happy</span>
             <span className="text-6xl">Hanukkah</span>
@@ -111,7 +109,7 @@ export default function Home() {
           </div>
           <Footer />
         </div>
-      )}
+      }
     </div>
   );
 }
