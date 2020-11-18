@@ -33,6 +33,7 @@ export default function Home() {
       <Head>
         <title>Happy Hanukkah</title>
         <link rel="icon" href="/favicon.ico" />
+        
       </Head>
 
       {userStatus === null && <Cargando />}
