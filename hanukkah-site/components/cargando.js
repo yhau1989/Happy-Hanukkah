@@ -1,7 +1,7 @@
 export default function Cargando() {
 
     return (
-        <span className="important text-2xl">Cargando...</span>
+        <span id="loading" className="important text-2xl">Cargando...</span>
       )
 
 }
