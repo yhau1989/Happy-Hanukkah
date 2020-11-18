@@ -1013,7 +1013,8 @@ video {
 
 :root{
   --amarillo: #FDC600;
-  --darkModeBackground: #171321;
+  /*--darkModeBackground: #171321;*/
+  --darkModeBackground: #16004a;
 }
 
 html,
