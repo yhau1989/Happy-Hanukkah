@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import styles from "../styles/Home.module.css"
-import { useAuth } from "../utils/auth"
+//import { useAuth } from "../utils/auth"
 import { useRouter } from "next/router"
 import Cargando from "../components/cargando"
 import dynamic from "next/dynamic"
@@ -9,7 +9,7 @@ const DinamicFamily = dynamic(() => import("../components/family"), {ssr: false}
 const DinamicFooter = dynamic(() => import("../components/footer"), {ssr: false}) 
 
 export default function Home() {
-  const auth = useAuth();
+  const auth = false;//useAuth();
   const router = useRouter();
   const [userStatus, setUserStatus] = useState(null);
 
