@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import Head from "next/head"
+// import Head from "next/head"
 import styles from "../styles/Home.module.css"
 import { useAuth } from "../utils/auth"
 import { useRouter } from "next/router"
@@ -30,11 +30,10 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Head>
+      {/* <Head>
         <title>Happy Hanukkah</title>
         <link rel="icon" href="/favicon.ico" />
-        
-      </Head>
+      </Head> */}
 
       {userStatus === null && <Cargando />}
 
