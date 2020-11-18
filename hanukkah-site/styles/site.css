@@ -752,6 +752,10 @@ video {
   font-size: 2.25rem;
 }
 
+.text-5xl {
+  font-size: 3rem;
+}
+
 .text-6xl {
   font-size: 4rem;
 }
@@ -1245,6 +1249,10 @@ a {
 
   .sm\:text-4xl {
     font-size: 2.25rem;
+  }
+
+  .sm\:text-6xl {
+    font-size: 4rem;
   }
 
   .sm\:mt-6 {
