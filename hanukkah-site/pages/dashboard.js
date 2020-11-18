@@ -7,7 +7,7 @@ import TopMenu from "../components/topmenu";
 import Hanukia from "../components/hanukia";
 import dynamic from "next/dynamic"
 
-const DinamicFooter = dynamic(() => import("../components/footer"), {ssr: false}) 
+// const DinamicFooter = dynamic(() => import("../components/footer")) 
 
 export default function asyncDashboard() {
   const auth = useAuth();
@@ -15,10 +15,11 @@ export default function asyncDashboard() {
   const [userStatus, setUserStatus] = useState(null);
 
   useEffect(() => {
-    evaluateState(auth.user);
-  }, [auth.user]);
+    evaluateState(auth?.user);
+  }, [auth?.user]);
 
   const evaluateState = (usr) => {
+    //console.log('evaluateState', usr)
     if (usr === false) {
       setUserStatus(usr);
     } else if (usr === null) {
@@ -33,7 +34,6 @@ export default function asyncDashboard() {
       return (
         <div className={styles.dashboard}>
           <TopMenu {...userStatus} />
-
           <p className="text-center text-purple-100 pt-10 font_Varela">
             Toca una candela para encenderla o apagarla
           </p>
@@ -58,7 +58,7 @@ export default function asyncDashboard() {
             sit sunt Lorem officia aliqua fugiat deserunt exercitation tempor
             pariatur nostrud non ullamco.
           </div>
-          <DinamicFooter />
+          {/* <DinamicFooter /> */}
         </div>
       );
     } else {

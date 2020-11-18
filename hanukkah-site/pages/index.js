@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react"
 import styles from "../styles/Home.module.css"
-//import { useAuth } from "../utils/auth"
+import { useAuth } from "../utils/auth"
 import { useRouter } from "next/router"
 import Cargando from "../components/cargando"
 import dynamic from "next/dynamic"
 
-const DinamicFamily = dynamic(() => import("../components/family"), {ssr: false}) 
-const DinamicFooter = dynamic(() => import("../components/footer"), {ssr: false}) 
+const DinamicFamily = dynamic(() => import("../components/family")) 
+const DinamicFooter = dynamic(() => import("../components/footer")) 
 
 export default function Home() {
-  const auth = false;//useAuth();
+  const auth = useAuth();
   const router = useRouter();
   const [userStatus, setUserStatus] = useState(null);
 
-  // useEffect(() => {
-  //   evaluateState(auth.user);
-  // }, [auth.user]);
+  useEffect(() => {
+    evaluateState(auth?.user);
+  }, [auth?.user]);
 
   const evaluateState = (usr) => {
     if (usr === null || usr === false) {
@@ -25,28 +25,25 @@ export default function Home() {
     }
   };
 
-
-  
   const indexPage = (usuarioLogged) => {
-    // debugger;
-    if(usuarioLogged === null)
-    {
-      return <div className={styles.container}>
-        <Cargando />
-      </div>
+    // if(usuarioLogged === null)
+    // {
+    //   return <div className={styles.container}>
+    //     <Cargando />
+    //   </div>
       
-    }
-    else if (usuarioLogged === false)
-    {
-      return  <div className={styles.container}>
-        <div className={styles.container}>
+    // }
+    // else if (usuarioLogged === false)
+    // {
+      return  <div id="container" className={styles.container}>
+        <div id="container_child" className={styles.container}>
           
-          <div className="flex flex-col pt-10 happyHanukkahTitle">
+          <div id="logo" className="flex flex-col pt-10 happyHanukkahTitle">
             <span className="pl-10 text-4xl">Happy</span>
             <span className="text-5xl sm:text-6xl">Hanukkah</span>
           </div>
-          <div className="w-full sm:w-auto flex-none flex flex-col-reverse sm:flex-row sm:items-start space-y-3 space-y-reverse sm:space-y-0 sm:space-x-4 mt-10 mx-auto xl:mx-0 p-10">
-            <div className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 bg-opacity-75 group-hover:bg-opacity-0 rounded-lg shadow-sm group-hover:shadow-lg py-3 px-5 border border-indigo-500 border-opacity-10 transition duration-150 transform group-hover:-translate-y-0.5">
+          <div id="access" className="w-full sm:w-auto flex-none flex flex-col-reverse sm:flex-row sm:items-start space-y-3 space-y-reverse sm:space-y-0 sm:space-x-4 mt-10 mx-auto xl:mx-0 p-10">
+            <div id="login_facebook" className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 bg-opacity-75 group-hover:bg-opacity-0 rounded-lg shadow-sm group-hover:shadow-lg py-3 px-5 border border-indigo-500 border-opacity-10 transition duration-150 transform group-hover:-translate-y-0.5">
               <svg
                 width="24"
                 height="24"
@@ -58,7 +55,7 @@ export default function Home() {
               <span>Ingresa con Facebook</span>
             </div>
 
-            <div className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 bg-opacity-20 group-hover:bg-opacity-30 rounded-lg shadow-sm group-hover:shadow-lg py-3 px-5 border border-indigo-500 border-opacity-10 transform group-hover:-translate-y-0.5 transition-all duration-150">
+            <div id="login_twitter" className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 bg-opacity-20 group-hover:bg-opacity-30 rounded-lg shadow-sm group-hover:shadow-lg py-3 px-5 border border-indigo-500 border-opacity-10 transform group-hover:-translate-y-0.5 transition-all duration-150">
               <svg
                 width="24"
                 height="24"
@@ -70,8 +67,8 @@ export default function Home() {
               Ingresa con Twitter
             </div>
 
-            <div
-              onClick={() => auth.signinWithGoogle("/dashboard")}
+            <div id="login_google"
+              onClick={() => auth?.signinWithGoogle("/dashboard")}
               className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center md:inline-flex inline-flex  sm:items-block items-center justify-center font-medium text-indigo-500 bg-opacity-20 group-hover:bg-opacity-30 rounded-lg shadow-sm group-hover:shadow-lg py-3 px-5 border border-indigo-500 border-opacity-10 transform group-hover:-translate-y-0.5 transition-all duration-150"
             >
               <svg
@@ -116,7 +113,7 @@ export default function Home() {
           <DinamicFooter />
         </div>
       </div>
-    }
+    // }
   }
 
 
