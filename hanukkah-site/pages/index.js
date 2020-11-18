@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import { useAuth } from "../utils/auth";
-import { useRouter } from "next/router";
-import Cargando from "../components/cargando";
-import Family from "../components/family";
-import Footer from "../components/footer"
+import { useEffect, useState } from "react"
+import Head from "next/head"
+import styles from "../styles/Home.module.css"
+import { useAuth } from "../utils/auth"
+import { useRouter } from "next/router"
+import Cargando from "../components/cargando"
+//import Family from "../components/family"
+//import Footer from "../components/footer"
+import dynamic from "next/dynamic"
+
+const DinamicFamily = dynamic(() => import("../components/family"), {ssr: false}) 
+const DinamicFooter = dynamic(() => import("../components/footer"), {ssr: false}) 
 
 export default function Home() {
   const auth = useAuth();
@@ -105,9 +109,9 @@ export default function Home() {
             </p>
           </div>
           <div className="my-animate-bounce w-full sm:w-3/4 md:w-3/4 lg:w-2/3 xl:w-3/5 my-16">
-            <Family />
+            <DinamicFamily />
           </div>
-          <Footer />
+          <DinamicFooter />
         </div>
       }
     </div>
