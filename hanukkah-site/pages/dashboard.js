@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useAuth } from "../utils/auth";
 import { useRouter } from "next/router";
 import Cargando from "../components/cargando";
 import TopMenu from "../components/topmenu";
 import Hanukia from "../components/hanukia";
-import Footer from "../components/footer";
+import dynamic from "next/dynamic"
+
+const DinamicFooter = dynamic(() => import("../components/footer"), {ssr: false}) 
 
 export default function asyncDashboard() {
   const auth = useAuth();
@@ -19,7 +20,6 @@ export default function asyncDashboard() {
 
   const evaluateState = (usr) => {
     if (usr === false) {
-      console.log(usr);
       setUserStatus(usr);
     } else if (usr === null) {
       router.replace("/");
@@ -32,10 +32,6 @@ export default function asyncDashboard() {
     if (logged) {
       return (
         <div className={styles.dashboard}>
-          <Head>
-            <title>Happy Hanukkah - Dashboard</title>
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
           <TopMenu {...userStatus} />
 
           <p className="text-center text-purple-100 pt-10 font_Varela">
@@ -62,7 +58,7 @@ export default function asyncDashboard() {
             sit sunt Lorem officia aliqua fugiat deserunt exercitation tempor
             pariatur nostrud non ullamco.
           </div>
-          <Footer />
+          <DinamicFooter />
         </div>
       );
     } else {
