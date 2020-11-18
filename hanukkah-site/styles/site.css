@@ -756,10 +756,6 @@ video {
   font-size: 3rem;
 }
 
-.text-6xl {
-  font-size: 4rem;
-}
-
 .leading-6 {
   line-height: 1.5rem;
 }
@@ -806,10 +802,6 @@ video {
 
 .p-10 {
   padding: 2.5rem;
-}
-
-.p-20 {
-  padding: 5rem;
 }
 
 .px-2 {
