@@ -83,7 +83,7 @@ export default function Home() {
               Ingresa con Google
             </div>
           </div>
-          <div className="text-center text-white px-10 font_Varela">
+          {/* <div className="text-center text-white px-10 font_Varela">
             <span className="important text-2xl">Hanukkah</span> también
             conocida como la Fiesta de las Luces o Luminarias, es una festividad
             judía que conmemora la rededicación del Segundo Templo de Jerusalén
@@ -110,7 +110,7 @@ export default function Home() {
           </div>
           <div className="my-animate-bounce w-full sm:w-3/4 md:w-3/4 lg:w-2/3 xl:w-3/5 my-16">
             <DinamicFamily />
-          </div>
+          </div> */}
           <DinamicFooter />
         </div>
       </div>
