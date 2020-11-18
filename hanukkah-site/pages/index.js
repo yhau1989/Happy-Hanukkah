@@ -13,9 +13,9 @@ export default function Home() {
   const router = useRouter();
   const [userStatus, setUserStatus] = useState(null);
 
-  useEffect(() => {
-    evaluateState(auth.user);
-  }, [auth.user]);
+  // useEffect(() => {
+  //   evaluateState(auth.user);
+  // }, [auth.user]);
 
   const evaluateState = (usr) => {
     if (usr === null || usr === false) {
@@ -26,7 +26,9 @@ export default function Home() {
   };
 
 
+  
   const indexPage = (usuarioLogged) => {
+    // debugger;
     if(usuarioLogged === null)
     {
       return <div className={styles.container}>
