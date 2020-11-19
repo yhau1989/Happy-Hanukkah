@@ -2,8 +2,19 @@ import React, { useEffect, useState } from "react"
 import styles from "../styles/Home.module.css"
 import { useAuth } from "../utils/auth"
 import { useRouter } from "next/router"
-import Family from "../components/family"
-import Footer from "../components/footer"
+// import Family from "../components/family"
+// import Footer from "../components/footer"
+import dynamic from 'next/dynamic'
+
+const DynamicFooterWithNoSSR = dynamic(
+  () => import('../components/footer'),
+  { ssr: false }
+)
+
+const DynamicFamilyWithNoSSR = dynamic(
+  () => import('../components/family'),
+  { ssr: false }
+)
 
 
 export default function Home() {
@@ -98,9 +109,9 @@ export default function Home() {
             </p>
           </div>
           <div className="my-animate-bounce w-full sm:w-3/4 md:w-3/4 lg:w-2/3 xl:w-3/5 my-16">
-            <Family />
+            <DynamicFamilyWithNoSSR />
           </div>
-          <Footer />
+          <DynamicFooterWithNoSSR />
         </div>
       </div>
     // }
