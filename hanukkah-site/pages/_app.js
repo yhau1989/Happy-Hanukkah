@@ -9,9 +9,9 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Happy Hanukkah</title>
         <link rel="icon" href="/favicon.ico" />
-        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet" />
+        <link rel="preload" as="font" type="font/woff2" href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap"  crossorigin />
+        <link rel="preload" as="font" type="font/woff2"  href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" crossorigin />
+        <link rel="preload" as="font" type="font/woff2"  href="https://fonts.googleapis.com/css2?family=Varela&display=swap" crossorigin />
       </Head>
       <AuthProvider>
         <Component {...pageProps} />
