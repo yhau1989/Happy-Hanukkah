@@ -37,8 +37,8 @@ a {
   font-family: 'Rock Salt', sans-serif; 
   transform: rotate3d(1, 1, 1, -12deg);
   color: var(--amarillo);
-   animation: neon .40s ease-in-out infinite alternate;
-  -webkit-animation: neon .40s ease-in-out infinite alternate; 
+   /* animation: neon .40s ease-in-out infinite alternate;
+  -webkit-animation: neon .40s ease-in-out infinite alternate;  */
 }
 
 .hannukia-fire{
