@@ -21638,11 +21638,9 @@ video {
           animation: bounce 1s infinite;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap'); */
 
 :root{
   --amarillo: #FDC600;
@@ -21672,8 +21670,8 @@ a {
   font-family: 'Rock Salt', sans-serif;
   transform: rotate3d(1, 1, 1, -12deg);
   color: var(--amarillo);
-  /* animation: neon .40s ease-in-out infinite alternate;
-  -webkit-animation: neon .40s ease-in-out infinite alternate;  */
+  animation: neon .40s ease-in-out infinite alternate;
+  -webkit-animation: neon .40s ease-in-out infinite alternate;
 }
 
 .hannukia-fire{
