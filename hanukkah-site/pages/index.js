@@ -5,8 +5,8 @@ import { useRouter } from "next/router"
 //import Cargando from "../components/cargando"
 import dynamic from "next/dynamic"
 
-const DinamicFamily = dynamic(() => import("../components/family"), { loading: () => <p>...</p> }) 
-const DinamicFooter = dynamic(() => import("../components/footer"), { loading: () => <p>...</p> }) 
+const DinamicFamily = dynamic(() => import("../components/family")) 
+const DinamicFooter = dynamic(() => import("../components/footer")) 
 
 export default function Home() {
   const auth = useAuth();
