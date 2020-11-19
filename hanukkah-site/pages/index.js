@@ -30,12 +30,12 @@ export default function Home() {
       return  <div id="container" className={styles.container}>
         <div id="container_child" className={styles.container}>
           
-          <div id="logo" className="flex flex-col pt-10 happyHanukkahTitle">
-            <span className="pl-10 text-4xl">Happy</span>
-            <span className="text-5xl sm:text-6xl">Hanukkah</span>
+          <div id="logo" width="381px" height="228px" className="flex flex-col pt-10 happyHanukkahTitle">
+            <span width="200px" height="76px" className="pl-10 text-4xl">Happy</span>
+            <span width="369px" height="136px" className="text-5xl sm:text-6xl">Hanukkah</span>
           </div>
           <div id="access" className="w-full sm:w-auto flex-none flex flex-col-reverse sm:flex-row sm:items-start space-y-3 space-y-reverse sm:space-y-0 sm:space-x-4 mt-10 mx-auto xl:mx-0 p-10">
-            <div id="login_facebook" className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 bg-opacity-75 group-hover:bg-opacity-0 rounded-lg shadow-sm group-hover:shadow-lg py-3 px-5 border border-indigo-500 border-opacity-10 transition duration-150 transform group-hover:-translate-y-0.5">
+            <div id="login_facebook" width="241px" height="51px" className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 bg-opacity-75 group-hover:bg-opacity-0 rounded-lg shadow-sm group-hover:shadow-lg py-3 px-5 border border-indigo-500 border-opacity-10 transition duration-150 transform group-hover:-translate-y-0.5">
               <svg
                 width="24"
                 height="24"
@@ -47,7 +47,7 @@ export default function Home() {
               <span>Ingresa con Facebook</span>
             </div>
 
-            <div id="login_twitter" className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 bg-opacity-20 group-hover:bg-opacity-30 rounded-lg shadow-sm group-hover:shadow-lg py-3 px-5 border border-indigo-500 border-opacity-10 transform group-hover:-translate-y-0.5 transition-all duration-150">
+            <div id="login_twitter" width="241px" height="51px" className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 bg-opacity-20 group-hover:bg-opacity-30 rounded-lg shadow-sm group-hover:shadow-lg py-3 px-5 border border-indigo-500 border-opacity-10 transform group-hover:-translate-y-0.5 transition-all duration-150">
               <svg
                 width="24"
                 height="24"
@@ -59,7 +59,7 @@ export default function Home() {
               Ingresa con Twitter
             </div>
 
-            <div id="login_google"
+            <div id="login_google" width="241px" height="51px"
               onClick={() => auth?.signinWithGoogle("/dashboard")}
               className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center md:inline-flex inline-flex  sm:items-block items-center justify-center font-medium text-indigo-500 bg-opacity-20 group-hover:bg-opacity-30 rounded-lg shadow-sm group-hover:shadow-lg py-3 px-5 border border-indigo-500 border-opacity-10 transform group-hover:-translate-y-0.5 transition-all duration-150"
             >
