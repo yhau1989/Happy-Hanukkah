@@ -1,3 +1,4 @@
+import loadable from '@loadable/component'
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 import { useAuth } from "../utils/auth";
@@ -5,9 +6,8 @@ import { useRouter } from "next/router";
 import Cargando from "../components/cargando";
 import TopMenu from "../components/topmenu";
 import Hanukia from "../components/hanukia";
-import dynamic from "next/dynamic"
 
-// const DinamicFooter = dynamic(() => import("../components/footer")) 
+const OtherComponentFooter = loadable(() => import('../components/footer'))
 
 export default function asyncDashboard() {
   const auth = useAuth();
@@ -15,17 +15,16 @@ export default function asyncDashboard() {
   const [userStatus, setUserStatus] = useState(null);
 
   useEffect(() => {
-    evaluateState(auth?.user);
-  }, [auth?.user]);
+    evaluateState(auth);
+  }, [auth]);
 
   const evaluateState = (usr) => {
-    //console.log('evaluateState', usr)
-    if (usr === false) {
-      setUserStatus(usr);
-    } else if (usr === null) {
+    if (usr?.loading === true || (usr?.loading === false && usr?.user === null)) {
+      setUserStatus(false);
+    } else if (usr?.loading === false && usr?.user != null && usr?.user != false) {
+      setUserStatus(usr.user);
+    } else if (usr?.loading === false && usr?.user === false) {
       router.replace("/");
-    } else {
-      setUserStatus(usr);
     }
   };
 
@@ -58,7 +57,7 @@ export default function asyncDashboard() {
             sit sunt Lorem officia aliqua fugiat deserunt exercitation tempor
             pariatur nostrud non ullamco.
           </div>
-          {/* <DinamicFooter /> */}
+          <OtherComponentFooter />
         </div>
       );
     } else {

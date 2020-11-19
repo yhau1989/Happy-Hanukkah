@@ -1,23 +1,8 @@
 import loadable from '@loadable/component'
-import React, { useEffect, useState} from "react"
+import React, { useEffect} from "react"
 import styles from "../styles/Home.module.css"
 import { useAuth } from "../utils/auth"
 import { useRouter } from "next/router"
-// import Family from "../components/family"
-// import Footer from "../components/footer"
-// import dynamic from 'next/dynamic'
-
-
-// const DynamicFooterWithNoSSR = dynamic(
-//   () => import('../components/footer'),
-//   { ssr: false }
-// )
-
-// const DynamicFamilyWithNoSSR = dynamic(
-//   () => import('../components/family'),
-//   { ssr: false }
-// )
-
 
 const OtherComponentFamily = loadable(() => import('../components/family'))
 const OtherComponentFooter = loadable(() => import('../components/footer'))
@@ -25,23 +10,19 @@ const OtherComponentFooter = loadable(() => import('../components/footer'))
 export default function Home() {
   const auth = useAuth();
   const router = useRouter();
-  const [userStatus, setUserStatus] = useState(null);
+  //const [userStatus, setUserStatus] = useState(null);
 
   useEffect(() => {
-    console.log('Home render')
-    evaluateState(auth?.user);
-  }, [auth?.user]);
+    evaluateState(auth);
+  }, [auth]);
 
   const evaluateState = (usr) => {
-    if (usr === null || usr === false) {
-      setUserStatus(usr);
-    } else {
+    if (usr?.loading === false && usr?.user != null && usr?.user != false) {
       router.replace("/dashboard");
     }
   };
 
-  const indexPage = (usuarioLogged) => {
-    
+  
       return  <div id="container" className={styles.container}>
         <div id="container_child" className={styles.container}>
           
@@ -121,7 +102,7 @@ export default function Home() {
         </div>
       </div>
     // }
-  }
+  
 
-  return indexPage(userStatus)
+  
 }
