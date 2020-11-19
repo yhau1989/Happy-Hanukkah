@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap'); */
-
 :root{
   --amarillo: #FDC600;
   /*--darkModeBackground: #171321;*/
