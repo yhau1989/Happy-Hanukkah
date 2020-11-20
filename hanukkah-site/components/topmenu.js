@@ -6,7 +6,7 @@ export default function TopMenu(params) {
   const { name, photoUrl } = params;
 
   return (
-    <div className="w-full border-b border-indigo-500 border-opacity-10 p-2 text-indigo-500 flex content-center items-center space-x-6">
+    <div className="w-full border-b-0 sm:border-b border-indigo-500 border-opacity-50 p-2 text-indigo-500 flex content-center items-center space-x-6">
       <div>
         <div className="flex flex-col happyHanukkahTitle">
           <span className="pl-3 text-1xl">Happy</span>
