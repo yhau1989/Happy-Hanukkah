@@ -31,7 +31,7 @@ export default function Home() {
           </div>
 
           <div id="access" className="w-full sm:w-auto flex-none flex flex-col-reverse sm:flex-row sm:items-start space-y-3 space-y-reverse sm:space-y-0 sm:space-x-4 mt-10 mx-auto xl:mx-0 p-10">
-            <div id="login_facebook" width="241" height="51" className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center sm:text-sm md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 text-opacity-100 rounded-lg shadow-sm py-3 px-5 border-2 border-indigo-300 border-opacity-50">
+            <div id="login_facebook" width="241" height="51" className="socialLogin">
               <svg
                 width="24"
                 height="24"
@@ -43,7 +43,7 @@ export default function Home() {
               Ingresa con Facebook
             </div>
 
-            <div id="login_twitter" width="241" height="51" className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center sm:text-sm md:inline-flex inline-flex items-center justify-center font-medium text-indigo-300 rounded-lg shadow-sm py-3 px-5 border-2 border-indigo-500 border-opacity-50">
+            <div id="login_twitter" width="241" height="51" className="socialLogin">
               <svg
                 width="24"
                 height="24"
@@ -57,7 +57,7 @@ export default function Home() {
 
             <div id="login_google" width="241" height="51"
               onClick={() => auth?.signinWithGoogle("/dashboard")}
-              className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center sm:text-sm md:inline-flex inline-flex items-center justify-center font-semibold text-indigo-300 rounded-lg shadow-sm py-3 px-5 border-2 border-indigo-500 border-opacity-50"
+              className="socialLogin"
             >
               <svg
                 width="24"
