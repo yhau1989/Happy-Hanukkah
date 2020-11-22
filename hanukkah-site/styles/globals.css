@@ -8,10 +8,6 @@
   --darkModeBackground: #16004a;
 }
 
-
-
-
-
 a {
   color: inherit;
   text-decoration: none;
@@ -115,4 +111,9 @@ a {
     transform: translateY(0);
     animationTimingFunction: cubic-bezier(0, 0, 0.2, 1);
   }
+}
+
+
+.socialLogin{
+  @apply cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center sm:text-sm md:inline-flex inline-flex items-center justify-center font-semibold text-indigo-300 rounded-lg shadow-sm py-3 px-5 border-2 border-indigo-500 border-opacity-50;
 }
