@@ -24,14 +24,14 @@ export default function Home() {
 
   
       return  <div id="container" className={styles.container}>
-        <div id="container_child" className={styles.container}>
-          
+
           <div id="logo" width="381" height="228" className="flex flex-col pt-10 happyHanukkahTitle">
             <span width="100%" height="auto" className="pl-10 text-4xl">Happy</span>
             <span width="100%" height="auto" className="text-6xl">Hanukkah</span>
           </div>
+
           <div id="access" className="w-full sm:w-auto flex-none flex flex-col-reverse sm:flex-row sm:items-start space-y-3 space-y-reverse sm:space-y-0 sm:space-x-4 mt-10 mx-auto xl:mx-0 p-10">
-            <div id="login_facebook" width="241" height="51" className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 text-opacity-100 rounded-lg shadow-sm py-3 px-5 border-2 border-indigo-500 border-opacity-50">
+            <div id="login_facebook" width="241" height="51" className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center sm:text-sm md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 text-opacity-100 rounded-lg shadow-sm py-3 px-5 border-2 border-indigo-500 border-opacity-50">
               <svg
                 width="24"
                 height="24"
@@ -43,7 +43,7 @@ export default function Home() {
               Ingresa con Facebook
             </div>
 
-            <div id="login_twitter" width="241" height="51" className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 rounded-lg shadow-sm py-3 px-5 border-2 border-indigo-500 border-opacity-50">
+            <div id="login_twitter" width="241" height="51" className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center sm:text-sm md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 rounded-lg shadow-sm py-3 px-5 border-2 border-indigo-500 border-opacity-50">
               <svg
                 width="24"
                 height="24"
@@ -57,7 +57,7 @@ export default function Home() {
 
             <div id="login_google" width="241" height="51"
               onClick={() => auth?.signinWithGoogle("/dashboard")}
-              className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center md:inline-flex inline-flex items-center justify-center font-medium text-indigo-500 rounded-lg shadow-sm py-3 px-5 border-2 border-indigo-500 border-opacity-50"
+              className="cursor-pointer w-full sm:w-auto sm:flex-wrap sm:text-center sm:text-sm md:inline-flex inline-flex items-center justify-center font-semibold text-indigo-500 rounded-lg shadow-sm py-3 px-5 border-2 border-indigo-500 border-opacity-50"
             >
               <svg
                 width="24"
@@ -99,7 +99,7 @@ export default function Home() {
             <OtherComponentFamily />
           </div>
           <OtherComponentFooter />
-        </div>
+        
       </div>
     // }
   
