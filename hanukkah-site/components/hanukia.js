@@ -1,4 +1,5 @@
 import { useState } from "react"
+import useSound from 'use-sound';
 
 
 export default function Hanukia(props) {
@@ -13,12 +14,20 @@ export default function Hanukia(props) {
   const flame7 = useState('prefix__st18')
   const flame8 = useState('prefix__st18')
 
+  const [flameOn] = useSound('./sounds/flame_on.mp3',{ volume: 1 });
+  const [flameOff] = useSound('./sounds/flame_off.mp3',{ volume: 1 });
+
   const changeStatusFlame = (stateValue, stateFunction) => {
-    stateFunction((stateValue == "prefix__st18") ? "prefix__on" : "prefix__st18")
+    if(stateValue == "prefix__st18"){
+      flameOn()
+      stateFunction("prefix__on my-animate-bounce" )
+    }
+    else{
+      flameOff()
+      stateFunction("prefix__st18")
+    }
   }
   
-
-
   return (<svg
       id="prefix__Capa_1"
       x={0}

@@ -1,13 +1,15 @@
-import loadable from '@loadable/component'
-import React, { useEffect, useState } from "react";
-import styles from "../styles/Home.module.css";
-import { useAuth } from "../utils/auth";
-import { useRouter } from "next/router";
-import Cargando from "../components/cargando";
-import TopMenu from "../components/topmenu";
-import Hanukia from "../components/hanukia";
+import loadable from "@loadable/component"
+import React, { useEffect, useState } from "react"
+import styles from "../styles/Home.module.css"
+import { useAuth } from "../utils/auth"
+import { useRouter } from "next/router"
+import Cargando from "../components/cargando"
+import TopMenu from "../components/topmenu"
+import Hanukia from "../components/hanukia"
+import {BrajaOne, BrajaTow, BrajaThree} from "../components/bendiciones"
 
-const OtherComponentFooter = loadable(() => import('../components/footer'))
+
+const OtherComponentFooter = loadable(() => import("../components/footer"));
 
 export default function asyncDashboard() {
   const auth = useAuth();
@@ -19,9 +21,16 @@ export default function asyncDashboard() {
   }, [auth]);
 
   const evaluateState = (usr) => {
-    if (usr?.loading === true || (usr?.loading === false && usr?.user === null)) {
+    if (
+      usr?.loading === true ||
+      (usr?.loading === false && usr?.user === null)
+    ) {
       setUserStatus(false);
-    } else if (usr?.loading === false && usr?.user != null && usr?.user != false) {
+    } else if (
+      usr?.loading === false &&
+      usr?.user != null &&
+      usr?.user != false
+    ) {
       setUserStatus(usr.user);
     } else if (usr?.loading === false && usr?.user === false) {
       router.replace("/");
@@ -34,7 +43,7 @@ export default function asyncDashboard() {
         <div className={styles.dashboard}>
           <TopMenu {...userStatus} />
           <p className="text-center text-purple-100 pt-10 font_Varela">
-            Toca una candela para encenderla o apagarla
+            Toca una candela para encenderla o apagarla, enciendelas de derecha a izquierda.
           </p>
 
           <div className="w-full sm:w-3/4 md:w-3/4 lg:w-2/3 xl:w-3/5">
@@ -42,20 +51,15 @@ export default function asyncDashboard() {
           </div>
 
           <h1 className="py-4 px-2 text-left font_ADaughter-title text-3xl font-display sm:mt-6 sm:text-4xl xl:text-5xl">
-            Bendición del día
+            Bendiciones
           </h1>
           <div
             id="braja"
-            className="text-center text-purple-100 px-10 font_Varela"
+            className=" text-purple-100 px-10 font_Varela"
           >
-            Deserunt officia enim do fugiat adipisicing eu incididunt anim
-            pariatur deserunt culpa ea. Tempor qui adipisicing aute officia.
-            Elit id aliqua commodo deserunt consectetur labore ea non officia
-            do. Anim do do laboris non tempor ea laboris quis exercitation. Non
-            cillum fugiat est ipsum sunt amet nostrud tempor. Ea ut enim et ad
-            proident ipsum exercitation Lorem excepteur veniam. Pariatur eiusmod
-            sit sunt Lorem officia aliqua fugiat deserunt exercitation tempor
-            pariatur nostrud non ullamco.
+            <BrajaOne />
+            <BrajaTow />
+            <BrajaThree />
           </div>
           <OtherComponentFooter />
         </div>
