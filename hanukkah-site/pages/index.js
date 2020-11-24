@@ -140,9 +140,10 @@ export default function Home() {
           rel="noopener noreferrer"
         >
            <img
-            src="https://img.youtube.com/vi/ztZTi-5uFkw/maxresdefault.jpg"
+            src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.webp"
             alt="Que es Januca?"
             loading="lazy"
+            
           />
           
           <div className="absolute inset-14 sm:rounded-3xl flex flex-col justify-center">
