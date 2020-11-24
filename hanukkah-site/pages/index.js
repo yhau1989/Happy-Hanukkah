@@ -132,16 +132,19 @@ export default function Home() {
       </div>
 
       <div className="py-3 flex flex-col justify-center sm:py-12">
+     
       <Link href="https://youtu.be/ztZTi-5uFkw">
         <a
           className="relative p-3 sm:max-w-4xl sm:mx-auto text-indigo-300 hover:text-indigo-600"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src="http://img.youtube.com/vi/ztZTi-5uFkw/maxresdefault.jpg"
-            alt="video"
+           <img
+            src="https://img.youtube.com/vi/ztZTi-5uFkw/maxresdefault.jpg"
+            alt="Que es Januca?"
+            loading="lazy"
           />
+          
           <div className="absolute inset-14 sm:rounded-3xl flex flex-col justify-center">
             <svg
               className="relative mx-auto w-16 h-16 md:w-32 md:h-32"
@@ -150,8 +153,8 @@ export default function Home() {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z"
                 fill="currentColor"
               />
