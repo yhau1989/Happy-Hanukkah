@@ -6,8 +6,7 @@ export const BrajaOne = (params) => {
         <div className="py-2">
           <span className="important text-2xl">Fonetica</span>
           <p>
-            Baruj ata Ado-noi Elo-heinu melej ha-olam, Asher kid-shanu
-            be-mitzvo-sav, Ve-tzi-vanu le-had-lik ner shel Januca.
+          Baruj ata HaShem Eloheinu melej ha-olam, Asher kid-shanu bemitzvo-tav, Ve-tzi-vanu le-had-lik ner shel Janucá.
           </p>
         </div>
         <div className="py-2">
@@ -15,7 +14,7 @@ export const BrajaOne = (params) => {
           <p>
             Bendito eres Tú, Hashem, Dios nuestro, Rey del universo, que nos ha
             santificado con Sus preceptos y nos ha ordenado encender la vela de
-            Januca.
+            Janucá.
           </p>
         </div>
       </div>
@@ -28,13 +27,13 @@ export const BrajaTow = (params) => {
         <div className="py-2">
           <span className="important text-2xl">Fonetica</span>
           <p>
-          Baruj ata Ado-noi Elo-heinu melej ha-olam, She-asa ni-sim la-avo-seinu, Baia-mim ha-hem baz-man ha-ze.
+          Baruj ata HaShem Eloheinu melej ha-olam, Sheasa nisim la-avo-teinu, Baia-mim ha-hem bazman haze.
           </p>
         </div>
         <div className="py-2">
           <span className="important text-2xl">Español</span>
           <p>
-          Bendito eres Tú, Hashem, Dios nuestro, Rey del universo, que realizó milagros para nuestros antepasados, en aquellos días en esta época.
+          Bendito eres Tú, Hashem, Dios nuestro, Rey del universo, que realizó milagros para nuestros padres, en aquellos días en esta época.
           </p>
         </div>
       </div>
@@ -48,7 +47,7 @@ export const BrajaTow = (params) => {
         <div className="py-2">
           <span className="important text-2xl">Fonetica</span>
           <p>
-          Baruj ata Ado-noi Elo-heinu melej ha-olam, She-he-je-ianu ve-ki-imanu Ve-hi-gi-ianu laz-man ha-ze.
+          Baruj ata HaShem Eloheinu melej haolam, Shehejeianu vekiimanu Vehigiianu lazman haze.
           </p>
         </div>
         <div className="py-2">
@@ -60,5 +59,24 @@ export const BrajaTow = (params) => {
       </div>
     
   }
+
+  export const Neherot = (params) => {
+    return <div id="brjaThree" className="my-8">
+        <h4 className="important text-3xl py-3">Proclamación</h4>
+        <div className="py-2">
+          <span className="important text-2xl">Español</span>
+          <p>
+          Estas velas encendemos por los milagros, las maravillas, las salvaciones y las batallas que realizaste para nuestros antepasados en aquellos días en esta época, a través de Tus santos sacerdotes. Durante los ocho días de Januca, estas velas son sagradas y no estamos autorizados para darles uso corriente, sino para contemplarlas y así poder expresar agradecimiento y alabanzas a Tu gran Nombre por Tus milagros, Tus maravillas y Tus salvaciones.
+          </p>
+        </div>
+        
+      </div>
+    
+  }
+
+
+  
+
+
 
   
