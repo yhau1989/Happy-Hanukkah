@@ -6,7 +6,8 @@ import { useRouter } from "next/router"
 import Cargando from "../components/cargando"
 import TopMenu from "../components/topmenu"
 import Hanukia from "../components/hanukia"
-import {BrajaOne, BrajaTow, BrajaThree} from "../components/bendiciones"
+import {BrajaOne, BrajaTow, BrajaThree, Neherot} from "../components/bendiciones"
+import Link from "next/link"
 
 
 const OtherComponentFooter = loadable(() => import("../components/footer"));
@@ -42,24 +43,28 @@ export default function asyncDashboard() {
       return (
         <div className={styles.dashboard}>
           <TopMenu {...userStatus} />
-          <p className="text-center text-purple-100 pt-10 font_Varela">
-            Toca una candela para encenderla o apagarla, enciendelas de derecha a izquierda.
+          <p className="text-center text-purple-100 px-2 py-3 sm:px-10 font_Varela">
+          Toca la candela central, recite las bendiciones, luego enciéndalas las candelas de derecha a izquierda (según el día, en orden "una candela más por día") {" "}
+          <Link className="mx-3" href="https://youtu.be/HUbZuXYgbDk?t=113">
+              <a className="text-indigo-500 hover:text-indigo-300" target="_blank" rel="noopener noreferrer">👉 <span className="px-1">ver video</span></a>
+            </Link>
+            
           </p>
-
-          <div className="w-full sm:w-3/4 md:w-3/4 lg:w-2/3 xl:w-3/5">
+          <div className="w-full md:w-10/12 xl:w-5/12">
             <Hanukia />
           </div>
 
-          <h1 className="py-4 px-2 text-left font_ADaughter-title text-3xl font-display sm:mt-6 sm:text-4xl xl:text-5xl">
+          <h1 className="py-4 px-2 text-left font_ADaughter-title text-4xl font-display sm:mt-6 xl:text-5xl">
             Bendiciones
           </h1>
           <div
             id="braja"
-            className=" text-purple-100 px-10 font_Varela"
+            className=" text-purple-100 px-5 sm:px-10 font_Varela"
           >
             <BrajaOne />
             <BrajaTow />
             <BrajaThree />
+            <Neherot />
           </div>
           <OtherComponentFooter />
         </div>
