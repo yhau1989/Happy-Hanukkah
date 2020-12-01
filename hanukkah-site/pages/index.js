@@ -43,7 +43,7 @@ export default function Home() {
         id="access"
         className="w-full sm:w-auto flex-none flex flex-col-reverse sm:flex-row sm:items-start space-y-3 space-y-reverse sm:space-y-0 sm:space-x-4 mt-10 mx-auto xl:mx-0 p-10"
       >
-        <div
+        {/* <div
           id="login_facebook"
           width="241"
           height="51"
@@ -58,9 +58,15 @@ export default function Home() {
             <path d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z" />
           </svg>
           Ingresa con Facebook
-        </div>
+        </div> */}
 
-        <div id="login_twitter" width="241" height="51" className="socialLogin">
+        <div
+          id="login_twitter"
+          width="241"
+          height="51"
+          onClick={() => auth?.signinWithTwitter("/dashboard")}
+          className="socialLogin"
+        >
           <svg
             width="24"
             height="24"
@@ -132,43 +138,40 @@ export default function Home() {
       </div>
 
       <div className="py-3 flex flex-col justify-center sm:py-12">
-     
-      <Link href="https://youtu.be/ztZTi-5uFkw">
-        <a
-          className="relative p-3 sm:max-w-4xl sm:mx-auto text-indigo-300 hover:text-indigo-600"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-           <img
-            src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.webp"
-            alt="Que es Januca?"
-            loading="lazy"
-            
-          />
-          
-          <div className="absolute inset-14 sm:rounded-3xl flex flex-col justify-center">
-            <svg
-              className="relative mx-auto w-16 h-16 md:w-32 md:h-32"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z"
-                fill="currentColor"
-              />
-              <path d="M16 12L10 16.3301V7.66987L16 12Z" fill="currentColor" />
-            </svg>
-          </div>
-        </a>
+        <Link href="https://youtu.be/ztZTi-5uFkw">
+          <a
+            className="relative p-3 sm:max-w-4xl sm:mx-auto text-indigo-300 hover:text-indigo-600"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.webp"
+              alt="Que es Januca?"
+              loading="lazy"
+            />
+
+            <div className="absolute inset-14 sm:rounded-3xl flex flex-col justify-center">
+              <svg
+                className="relative mx-auto w-16 h-16 md:w-32 md:h-32"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M16 12L10 16.3301V7.66987L16 12Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+          </a>
         </Link>
       </div>
-
-      
-        
-      
 
       <OtherComponentFooter />
     </div>
