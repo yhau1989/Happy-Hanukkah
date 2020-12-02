@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useRouter } from "next/router"
 
 export default function Burgermenu(props) {
   const [action, setAction] = useState(1);
+  const router = useRouter();
+  const { locale } = router
 
   return (
     <span className="flex-1 flex justify-end sm:hidden">
@@ -40,13 +43,14 @@ export default function Burgermenu(props) {
           </div>
           <div className="flex flex-col content-center items-center space-y-6 p-10">
             <span className="font_ADaughter-title text-2xl leading-6 font-medium">
-              Dia 1
+              {(locale == "en") ? 'Day' : 'Día'} 1
             </span>
             <a
               className="font_ADaughter-title text-2xl leading-6 font-medium"
               href="#braja"
+              onClick={() => setAction(1)}
             >
-              Bendición del día
+              {(locale == "en") ? 'Pray today' : 'Bendiciónes del día'}
             </a>
             <div className="flex-1 flex justify-center content-center items-center space-x-2 ">
               <span className="font_ADaughter-title text-2xl leading-6 font-medium">
@@ -62,7 +66,7 @@ export default function Burgermenu(props) {
                 onClick={() => props.funSalir.signout()}
                 className="font_ADaughter-title text-2xl leading-6 font-medium flex"
               >
-                Salir
+                 {(locale == "en") ? 'Logout' : 'Salir'}
               </button>
           </div>
         </div>

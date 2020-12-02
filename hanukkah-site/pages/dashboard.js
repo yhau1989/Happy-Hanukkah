@@ -16,6 +16,7 @@ export default function asyncDashboard() {
   const auth = useAuth();
   const router = useRouter();
   const [userStatus, setUserStatus] = useState(null);
+  const { locale } = router
 
   useEffect(() => {
     evaluateState(auth);
@@ -44,27 +45,35 @@ export default function asyncDashboard() {
         <div className={styles.dashboard}>
           <TopMenu {...userStatus} />
           <p className="text-center text-purple-100 px-2 py-3 sm:px-10 font_Varela">
-          Toca la candela central, recite las bendiciones, luego enciéndalas las candelas de derecha a izquierda (según el día, en orden "una candela más por día") {" "}
-          <Link className="mx-3" href="https://youtu.be/HUbZuXYgbDk?t=113">
-              <a className="text-indigo-500 hover:text-indigo-300" target="_blank" rel="noopener noreferrer">👉 <span className="px-1">ver video</span></a>
-            </Link>
-            
+
+         { locale ==  "en"
+            ? <>Touch the central candle, recite the blessings, then light the candles from right to left (depending on the day, in order "one more candle per day") {" "}
+            <Link className="mx-3" href="https://youtu.be/WQEqQKcEzzo">
+                <a className="text-indigo-500 hover:text-indigo-300" target="_blank" rel="noopener noreferrer">👉 <span className="px-1">watch video</span></a>
+              </Link>
+              </>
+            : <>Toca la candela central, recite las bendiciones, luego enciéndalas las candelas de derecha a izquierda (según el día, en orden "una candela más por día") {" "}
+            <Link className="mx-3" href="https://youtu.be/HUbZuXYgbDk?t=113">
+                <a className="text-indigo-500 hover:text-indigo-300" target="_blank" rel="noopener noreferrer">👉 <span className="px-1">ver video</span></a>
+              </Link> 
+              </>
+         }   
           </p>
           <div className="w-full md:w-10/12 xl:w-5/12">
             <Hanukia />
           </div>
 
           <h1 className="py-4 px-2 text-left font_ADaughter-title text-4xl font-display sm:mt-6 xl:text-5xl">
-            Bendiciones
+            {locale ==  "en" ? "Blessings" : "Bendiciones"}
           </h1>
           <div
             id="braja"
             className=" text-purple-100 px-5 sm:px-10 font_Varela"
           >
-            <BrajaOne />
-            <BrajaTow />
-            <BrajaThree />
-            <Neherot />
+            <BrajaOne lenguage={locale} />
+            <BrajaTow lenguage={locale}/>
+            <BrajaThree lenguage={locale}/>
+            <Neherot lenguage={locale}/>
           </div>
           <OtherComponentFooter />
         </div>
