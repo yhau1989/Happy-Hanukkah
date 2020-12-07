@@ -8,6 +8,7 @@ import TopMenu from "../components/topmenu"
 import Hanukia from "../components/hanukia"
 import {BrajaOne, BrajaTow, BrajaThree, Neherot} from "../components/bendiciones"
 import Link from "next/link"
+import {IsFirstDay } from "../utils/holiday"
 
 
 const OtherComponentFooter = loadable(() => import("../components/footer"));

@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import {IsFirstDay } from "../utils/holiday"
 
 const i18nPalabras = {
   bendicion: {
@@ -94,30 +95,40 @@ export const BrajaTow = (params) => {
 };
 
 export const BrajaThree = (params) => {
-  return (
-    <div id="brjaThree" className="my-8">
-      <h4 className="important text-3xl py-3">
-        {i18nSetPalabras("bendicion")} # 3
-      </h4>
-      <div className="py-2">
-        <span className="important text-2xl">
-          {i18nSetPalabras("fonetica")}
-        </span>
-        <p>
-          Baruj ata HaShem Eloheinu melej haolam, Shehejeianu vekiimanu
-          Vehigiianu lazman haze.
-        </p>
+
+  if(IsFirstDay())
+  {
+    return (
+      <div id="brjaThree" className="my-8">
+        <h4 className="important text-3xl py-3">
+          {i18nSetPalabras("bendicion")} # 3
+        </h4>
+        <div className="py-2">
+          <span className="important text-2xl">
+            {i18nSetPalabras("fonetica")}
+          </span>
+          <p>
+            Baruj ata HaShem Eloheinu melej haolam, Shehejeianu vekiimanu
+            Vehigiianu lazman haze.
+          </p>
+        </div>
+        <div className="py-2">
+          <span className="important text-2xl">{i18nSetPalabras("idioma")}</span>
+          <p>
+            Bendito eres Tú, Hashem, Dios nuestro, Rey del universo, que nos ha
+            mantenido con vida, nos sostuvo y no ha permitido llegar a esta
+            ocasión.
+          </p>
+        </div>
       </div>
-      <div className="py-2">
-        <span className="important text-2xl">{i18nSetPalabras("idioma")}</span>
-        <p>
-          Bendito eres Tú, Hashem, Dios nuestro, Rey del universo, que nos ha
-          mantenido con vida, nos sostuvo y no ha permitido llegar a esta
-          ocasión.
-        </p>
-      </div>
-    </div>
-  );
+    );
+  }
+  else
+  {
+    return ""
+  }
+
+  
 };
 
 export const Neherot = (params) => {
