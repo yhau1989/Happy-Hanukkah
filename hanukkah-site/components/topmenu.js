@@ -1,6 +1,7 @@
 import { useAuth } from "../utils/auth";
 import BurgerMenu from "../components/burgermenu"
 import { useRouter } from "next/router"
+import { getDayHoliday } from "../utils/holiday"
 
 export default function TopMenu(params) {
   const auth = useAuth();
@@ -17,7 +18,7 @@ export default function TopMenu(params) {
         </div>
       </div>
       <span className="hidden sm:block font_ADaughter-title text-lg leading-6 font-medium">
-      {(locale == "en") ? 'Day' : 'Día'} 1
+        { getDayHoliday(new Date)}
       </span>
       <div className="hidden sm:flex flex-1  justify-end content-center items-center space-x-2">
         <span className="text-base leading-6 font-medium text-indigo-500">

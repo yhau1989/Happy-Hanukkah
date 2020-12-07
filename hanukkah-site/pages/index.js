@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import MainIndex from "../components/mainIndex"
 import BannerIntro from "../components/bannerIntro"
+import { getDayHoliday } from "../utils/holiday"
 
 const OtherComponentFamily = loadable(() => import("../components/family"));
 const OtherComponentFooter = loadable(() => import("../components/footer"));
@@ -27,6 +28,7 @@ export default function Home() {
 
   return (
     <div id="container" className={styles.container}>
+      <div className="font_ADaughter-title">{getDayHoliday(new Date)}</div>
       <div
         id="logo"
         width="381"

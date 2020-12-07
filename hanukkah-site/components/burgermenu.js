@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router"
+import { getDayHoliday } from "../utils/holiday"
 
 export default function Burgermenu(props) {
   const [action, setAction] = useState(1);
@@ -43,14 +44,14 @@ export default function Burgermenu(props) {
           </div>
           <div className="flex flex-col content-center items-center space-y-6 p-10">
             <span className="font_ADaughter-title text-2xl leading-6 font-medium">
-              {(locale == "en") ? 'Day' : 'Día'} 1
+            { getDayHoliday(new Date)}
             </span>
             <a
               className="font_ADaughter-title text-2xl leading-6 font-medium"
               href="#braja"
               onClick={() => setAction(1)}
             >
-              {(locale == "en") ? 'Pray today' : 'Bendiciónes del día'}
+              {(locale == "en") ? 'Blessings' : 'Bendiciónes'}
             </a>
             <div className="flex-1 flex justify-center content-center items-center space-x-2 ">
               <span className="font_ADaughter-title text-2xl leading-6 font-medium">
