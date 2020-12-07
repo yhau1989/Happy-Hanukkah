@@ -1,10 +1,11 @@
 import '../styles/site.css'
 import { AuthProvider } from '../utils/auth'
 import Head from "next/head"
+import {seoBilingue } from "../utils/seo"
 
 function MyApp({ Component, pageProps }) {
 
-  
+  const seoDes = seoBilingue()
   
   return (
     <>
@@ -23,18 +24,18 @@ function MyApp({ Component, pageProps }) {
         <meta name="theme-color" content="#16004a"></meta>
         
         <meta name="title" content="Happy Hanukkah" />
-        <meta name="description" content="Celebrada durante ocho días, la festividad de la Janucá data de la época de la hegemonía helénica en Israel, que comienza con las conquistas de Alejandro Magno el año 332 a. C., Como se puede leerse en los libros de I y II Macabeos, donde esta festividad conmemora la derrota de los helenos y la recuperación de la independencia judía a manos de los macabeos sobre los griegos de la dinastía de Seleuco, y la posterior purificación del Segundo Templo de Jerusalén de los íconos paganos, en el siglo II a. C. La tradición judía habla de un milagro, en el que pudo encenderse el candelabro del templo durante ocho días consecutivos con muy poca cantidad de aceite, que alcanzaba solo para uno. Esto dio origen a la principal costumbre de la festividad, que es la de encender, de forma progresiva, un candelabro de nueve brazos llamado Januquiá. Ingresa y enciende tu Januquiá todos los días, recitas las bendiciones y comparte con tus amigos" />
+        <meta name="description" content={seoDes} />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://happy-hanukkah.vercel.app/" />
         <meta property="og:title" content="Happy Hanukkah" />
-        <meta property="og:description" content="Celebrada durante ocho días, la festividad de la Janucá data de la época de la hegemonía helénica en Israel, que comienza con las conquistas de Alejandro Magno el año 332 a. C., Como se puede leerse en los libros de I y II Macabeos, donde esta festividad conmemora la derrota de los helenos y la recuperación de la independencia judía a manos de los macabeos sobre los griegos de la dinastía de Seleuco, y la posterior purificación del Segundo Templo de Jerusalén de los íconos paganos, en el siglo II a. C. La tradición judía habla de un milagro, en el que pudo encenderse el candelabro del templo durante ocho días consecutivos con muy poca cantidad de aceite, que alcanzaba solo para uno. Esto dio origen a la principal costumbre de la festividad, que es la de encender, de forma progresiva, un candelabro de nueve brazos llamado Januquiá. Ingresa y enciende tu Januquiá todos los días, recitas las bendiciones y comparte con tus amigos" />
+        <meta property="og:description" content={seoDes} />
         <meta property="og:image" content="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1605853375/happy-hanukkah/Group_1_zscbag.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://happy-hanukkah.vercel.app/" />
         <meta property="twitter:title" content="Happy Hanukkah" />
-        <meta property="twitter:description" content="Celebrada durante ocho días, la festividad de la Janucá data de la época de la hegemonía helénica en Israel, que comienza con las conquistas de Alejandro Magno el año 332 a. C., Como se puede leerse en los libros de I y II Macabeos, donde esta festividad conmemora la derrota de los helenos y la recuperación de la independencia judía a manos de los macabeos sobre los griegos de la dinastía de Seleuco, y la posterior purificación del Segundo Templo de Jerusalén de los íconos paganos, en el siglo II a. C. La tradición judía habla de un milagro, en el que pudo encenderse el candelabro del templo durante ocho días consecutivos con muy poca cantidad de aceite, que alcanzaba solo para uno. Esto dio origen a la principal costumbre de la festividad, que es la de encender, de forma progresiva, un candelabro de nueve brazos llamado Januquiá. Ingresa y enciende tu Januquiá todos los días, recitas las bendiciones y comparte con tus amigos" />
+        <meta property="twitter:description" content={seoDes} />
         <meta property="twitter:image" content="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1605853375/happy-hanukkah/Group_1_zscbag.png"></meta>
         <style>
         {`html,
