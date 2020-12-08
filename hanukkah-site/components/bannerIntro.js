@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from 'next/image'
+
 
 export default function BannerIntro(params) {
     const {lenguage} = params
@@ -13,11 +15,20 @@ export default function BannerIntro(params) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+
+          <Image
+                  src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606799084/happy-hanukkah/maxresdefault_wboyia.jpg"
+                  alt="What is Hanukkah?"
+                  height={700}
+                  width={1200}
+                  
+
+                />
+            {/* <img
               src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606799084/happy-hanukkah/maxresdefault_wboyia.webp"
               alt="What is Hanukkah?"
               loading="lazy"
-            />
+            /> */}
 
             <div className="absolute inset-14 sm:rounded-3xl flex flex-col justify-center">
               <svg
@@ -51,11 +62,19 @@ export default function BannerIntro(params) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
+            <Image
+                  src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.jpg"
+                  alt="Que es Januca?"
+                  height={700}
+                  width={1200}
+                  
+
+                />
+            {/* <img
               src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.webp"
               alt="Que es Januca?"
               loading="lazy"
-            />
+            /> */}
 
             <div className="absolute inset-14 sm:rounded-3xl flex flex-col justify-center">
               <svg
