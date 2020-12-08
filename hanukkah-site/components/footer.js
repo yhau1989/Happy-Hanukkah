@@ -2,7 +2,7 @@ import Link from "next/link"
 export default function Footer() {
     return (
         <div id="footer" width="275" height="25" className="mt-10 mb-3 text-center text-white flex">
-          CJEEI - made wiht <svg
+          CJEEI - made with <svg
               width="24"
               height="24"
               stroke="currentColor"
