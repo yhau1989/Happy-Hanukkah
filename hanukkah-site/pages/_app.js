@@ -73,7 +73,7 @@ function MyApp({ Component, pageProps }) {
           }
         `}
         </style>
-        <script async src="https://cdn.splitbee.io/sb.js"></script>
+        <script rel="preload" src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
       <AuthProvider>
         <Component {...pageProps} />
