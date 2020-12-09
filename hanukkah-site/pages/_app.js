@@ -2,6 +2,7 @@ import '../styles/site.css'
 import { AuthProvider } from '../utils/auth'
 import Head from "next/head"
 import {seoBilingue } from "../utils/seo"
+import GoogleFonts from "next-google-fonts";
 
 function MyApp({ Component, pageProps }) {
 
@@ -9,6 +10,7 @@ function MyApp({ Component, pageProps }) {
   
   return (
     <>
+      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Rock+Salt&family=Varela&display=swap" />
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
@@ -37,11 +39,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="twitter:title" content="Happy Hanukkah" />
         <meta property="twitter:description" content={seoDes} />
         <meta property="twitter:image" content="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1605853375/happy-hanukkah/Group_1_zscbag.png"></meta>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet" />
-
+        
         {/* <style>
         {`html,
           body {
