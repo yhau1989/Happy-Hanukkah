@@ -14,6 +14,7 @@ export default function BannerIntro(params) {
             className="relative p-3 sm:max-w-4xl sm:mx-auto text-indigo-300 hover:text-indigo-600"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="What is Hanukkah?"
           >
 
           <Image
@@ -61,6 +62,7 @@ export default function BannerIntro(params) {
             className="relative p-3 sm:max-w-4xl sm:mx-auto text-indigo-300 hover:text-indigo-600"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Que es Januca?"
           >
             <Image
                   src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.jpg"
