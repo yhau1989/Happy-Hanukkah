@@ -1,24 +1,29 @@
 import Link from "next/link";
 import Image from 'next/image'
-import {isIE, isSafari} from 'react-device-detect';
+import {isChrome, isFirefox, browserName} from 'react-device-detect';
 
 
 export default function BannerIntro(params) {
     const {lenguage} = params
 
     const bannerImgEn = () => {
-      const img = (isIE || isSafari)
-      ? 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606799084/happy-hanukkah/maxresdefault_wboyia.jpg'
-      : 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606799084/happy-hanukkah/maxresdefault_wboyia.webp'
-
+      let img = (isChrome || isFirefox)
+      ? 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606799084/happy-hanukkah/maxresdefault_wboyia.webp'
+      : 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606799084/happy-hanukkah/maxresdefault_wboyia.jpg'
       return <Image src={img} alt="What is Hanukkah?" height={700} width={1200} />
     }
 
     const bannerImgEs = () => {
-      const r = isIE
-      const g = isSafari
-      const img2 = (g) ? 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.jpg' : 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.webp'
-      return <Image src={img2} alt={`Que es Januca? isSafari:${g} - isIE:${r}`} height={700} width={1200} />
+      // console.log(`isSafari:${isSafari}`)
+      // console.log(`isIE:${isIE}`)
+      // console.log(`isChrome:${isChrome}`)
+      // console.log(`isFirefox:${isFirefox}`)
+      // console.log(`browserName:${browserName}`)
+      
+      let img2 = (isChrome || isFirefox)
+      ? 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.webp'
+      : 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.jpg'
+      return <Image src={img2} alt= {`Que es Januca? browserName:${browserName}`} height={700} width={1200} />
     }
  
 
