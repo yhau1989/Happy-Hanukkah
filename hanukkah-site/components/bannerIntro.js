@@ -33,21 +33,6 @@ export default function BannerIntro(params) {
             aria-label="What is Hanukkah?"
           >
             {bannerImgEn()}
-
-          {/* <Image
-                  src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606799084/happy-hanukkah/maxresdefault_wboyia.jpg"
-                  alt="What is Hanukkah?"
-                  height={700}
-                  width={1200}
-                  
-
-                /> */}
-            {/* <img
-              src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606799084/happy-hanukkah/maxresdefault_wboyia.webp"
-              alt="What is Hanukkah?"
-              loading="lazy"
-            /> */}
-
             <div className="absolute inset-14 sm:rounded-3xl flex flex-col justify-center">
               <svg
                 className="relative mx-auto w-16 h-16 md:w-32 md:h-32"
@@ -82,20 +67,6 @@ export default function BannerIntro(params) {
             aria-label="Que es Januca?"
           >
             {bannerImgEs()}
-            {/* <Image
-                  src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.jpg"
-                  alt="Que es Januca?"
-                  height={700}
-                  width={1200}
-                  
-
-                /> */}
-            {/* <img
-              src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.webp"
-              alt="Que es Januca?"
-              loading="lazy"
-            /> */}
-
             <div className="absolute inset-14 sm:rounded-3xl flex flex-col justify-center">
               <svg
                 className="relative mx-auto w-16 h-16 md:w-32 md:h-32"
