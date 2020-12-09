@@ -3,10 +3,12 @@ import { AuthProvider } from '../utils/auth'
 import Head from "next/head"
 import {seoBilingue } from "../utils/seo"
 
+
 function MyApp({ Component, pageProps }) {
   const seoDes = seoBilingue()
   
   return (
+
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
