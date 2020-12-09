@@ -1,19 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
 import { useAuth } from "../utils/auth";
 import { useRouter } from "next/router";
-import MainIndex from "../components/mainIndex"
-import BannerIntro from "../components/bannerIntro"
 import { getDayHoliday } from "../utils/holiday"
+import dynamic from 'next/dynamic'
+// import MainIndex from "../components/mainIndex"
+// import BannerIntro from "../components/bannerIntro"
+// import OtherComponentFamily from "../components/family"
+// import OtherComponentFooter from "../components/footer"
 
-import OtherComponentFamily from "../components/family"
-import OtherComponentFooter from "../components/footer"
+
+const MainIndex = dynamic(() => import('../components/mainIndex'))
+const BannerIntro = dynamic(() => import('../components/bannerIntro'))
+const OtherComponentFamily = dynamic(() => import('../components/family'))
+const OtherComponentFooter = dynamic(() => import('../components/footer'))
 
 export default function Home() {
   const auth = useAuth();
   const router = useRouter();
   const { locale } = router
   
-
   useEffect(() => {
     evaluateState(auth);
   }, [auth]);
@@ -26,7 +31,7 @@ export default function Home() {
   };
 
   return (
-    <div id="container" className="container">
+    <div id="container" className="container"> 
       <div className="font_ADaughter-title">{getDayHoliday(new Date)} </div>
       <div
         id="logo"
@@ -92,6 +97,5 @@ export default function Home() {
 
       <OtherComponentFooter />
     </div>
-  );
-  // }
-}
+    
+  )}
