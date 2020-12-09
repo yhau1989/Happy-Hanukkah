@@ -74,7 +74,6 @@ export default function MainIndex(params) {
             👉 <span className="px-1">seguir leyendo</span>
           </a>
         </Link>
-        {/* https://en.wikipedia.org/wiki/Hanukkah */}
         <p className="py-2">
           Ingresa y enciende tu Januquiá todos los días, recitas las bendiciones
           y comparte con tus amigos

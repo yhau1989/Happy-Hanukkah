@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/router"
 import { getDayHoliday } from "../utils/holiday"
 
@@ -6,6 +6,7 @@ export default function Burgermenu(props) {
   const [action, setAction] = useState(1);
   const router = useRouter();
   const { locale } = router
+  const dayFest = getDayHoliday(new Date)
 
   return (
     <span className="flex-1 flex justify-end sm:hidden">
@@ -43,8 +44,8 @@ export default function Burgermenu(props) {
             </svg>
           </div>
           <div className="flex flex-col content-center items-center space-y-6 p-10">
-            <span className="font_ADaughter-title text-2xl leading-6 font-medium">
-            { getDayHoliday(new Date)}
+            <span className="font_ADaughter-title text-center text-2xl leading-6 font-medium">
+             { dayFest}
             </span>
             <a
               className="font_ADaughter-title text-2xl leading-6 font-medium"

@@ -2,8 +2,6 @@ import Link from "next/link";
 import Image from 'next/image'
 import useDeviceDetect from "../utils/useDeviceDetect";
 
-
-
 export default function BannerIntro(params) {
     const {lenguage} = params
     const { isModerWeb } = useDeviceDetect();

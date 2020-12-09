@@ -1,6 +1,4 @@
-//import loadable from "@loadable/component";
 import React, { useEffect } from "react";
-//import styles from "../styles/Home.module.css";
 import { useAuth } from "../utils/auth";
 import { useRouter } from "next/router";
 import MainIndex from "../components/mainIndex"
@@ -9,11 +7,6 @@ import { getDayHoliday } from "../utils/holiday"
 
 import OtherComponentFamily from "../components/family"
 import OtherComponentFooter from "../components/footer"
-
-
-// const OtherComponentFamily = loadable(() => import("../components/family"));
-// const OtherComponentFooter = loadable(() => import("../components/footer"));
-
 
 export default function Home() {
   const auth = useAuth();

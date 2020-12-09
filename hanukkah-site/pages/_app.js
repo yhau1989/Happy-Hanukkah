@@ -2,14 +2,12 @@ import '../styles/site.css'
 import { AuthProvider } from '../utils/auth'
 import Head from "next/head"
 import {seoBilingue } from "../utils/seo"
-// import GoogleFonts from "next-google-fonts";
 
 function MyApp({ Component, pageProps }) {
   const seoDes = seoBilingue()
   
   return (
     <>
-      {/* <GoogleFonts href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Rock+Salt&family=Varela&display=swap" /> */}
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />

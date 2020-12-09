@@ -49,7 +49,7 @@ const validateDateTime = clientDate =>
 }
 
 
-export const IsFirstDay = clientDate =>{
+export const IsFirstDay = clientDate => {
     const validDay = validateDateTime(clientDate)
     if(validDay == 1)
     {
@@ -61,8 +61,8 @@ export const IsFirstDay = clientDate =>{
 
 export const getDayHoliday = clientDate => 
 {
-    const router = useRouter();
-    const { locale } = router  
+    const router2 = useRouter();
+    const { locale } = router2 
     const validDay = validateDateTime(clientDate)
     if(validDay == 1)
     {
