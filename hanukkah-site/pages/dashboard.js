@@ -1,6 +1,6 @@
 import loadable from "@loadable/component"
 import React, { useEffect, useState } from "react"
-import styles from "../styles/Home.module.css"
+//import styles from "../styles/Home.module.css"
 import { useAuth } from "../utils/auth"
 import { useRouter } from "next/router"
 import Cargando from "../components/cargando"
@@ -8,8 +8,6 @@ import TopMenu from "../components/topmenu"
 import Hanukia from "../components/hanukia"
 import {BrajaOne, BrajaTow, BrajaThree, Neherot} from "../components/bendiciones"
 import Link from "next/link"
-import {IsFirstDay } from "../utils/holiday"
-
 
 const OtherComponentFooter = loadable(() => import("../components/footer"));
 
@@ -43,7 +41,7 @@ export default function asyncDashboard() {
   const Hannukkah = (logged) => {
     if (logged) {
       return (
-        <div className={styles.dashboard}>
+        <div className="dashboard">
           <TopMenu {...userStatus} />
           <p className="text-center text-purple-100 px-2 py-3 sm:px-10 font_Varela">
 
@@ -81,7 +79,7 @@ export default function asyncDashboard() {
       );
     } else {
       return (
-        <div className={styles.container}>
+        <div className="container">
           {" "}
           <Cargando />{" "}
         </div>

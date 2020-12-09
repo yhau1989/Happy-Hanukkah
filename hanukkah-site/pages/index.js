@@ -1,15 +1,17 @@
 import loadable from "@loadable/component";
 import React, { useEffect } from "react";
-import styles from "../styles/Home.module.css";
+//import styles from "../styles/Home.module.css";
 import { useAuth } from "../utils/auth";
 import { useRouter } from "next/router";
-import MainIndex from "../components/mainIndex"
-import BannerIntro from "../components/bannerIntro"
+// import MainIndex from "../components/mainIndex"
+// import BannerIntro from "../components/bannerIntro"
 import { getDayHoliday } from "../utils/holiday"
 
 
 const OtherComponentFamily = loadable(() => import("../components/family"));
 const OtherComponentFooter = loadable(() => import("../components/footer"));
+const MyMainIndex = loadable(() => import("../components/MainIndex"));
+const MyBannerIntro = loadable(() => import("../components/bannerIntro"));
 
 export default function Home() {
   const auth = useAuth();
@@ -29,7 +31,7 @@ export default function Home() {
   };
 
   return (
-    <div id="container" className={styles.container}>
+    <div id="container" className="container">
       <div className="font_ADaughter-title">{getDayHoliday(new Date)} </div>
       <div
         id="logo"
@@ -49,23 +51,6 @@ export default function Home() {
         id="access"
         className="w-full sm:w-auto flex-none flex flex-col-reverse sm:flex-row sm:items-start space-y-3 space-y-reverse sm:space-y-0 sm:space-x-4 mt-10 mx-auto xl:mx-0 p-10"
       >
-        {/* <div
-          id="login_facebook"
-          width="241"
-          height="51"
-          className="socialLogin"
-        >
-          <svg
-            width="24"
-            height="24"
-            fill="currentColor"
-            className="text-white mr-3 text-opacity-75"
-          >
-            <path d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z" />
-          </svg>
-          Ingresa con Facebook
-        </div> */}
-
         <div
           id="login_twitter"
           width="241"
@@ -103,12 +88,12 @@ export default function Home() {
           {(locale == "en") ? "Continue with Google" : "Ingresa con Google" }
         </div>
       </div>
-      <MainIndex lenguage={locale} />
+      <MyMainIndex lenguage={locale} />
       <div className="my-animate-bounce w-full sm:w-3/4 md:w-3/4 lg:w-2/3 xl:w-3/5 my-16">
         <OtherComponentFamily />
       </div>
 
-      <BannerIntro lenguage={locale} />
+      <MyBannerIntro lenguage={locale} />
 
       <OtherComponentFooter />
     </div>
