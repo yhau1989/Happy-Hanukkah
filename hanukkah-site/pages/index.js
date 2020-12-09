@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import { useAuth } from "../utils/auth";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import MainIndex from "../components/mainIndex"
 import BannerIntro from "../components/bannerIntro"
 import { getDayHoliday } from "../utils/holiday"
