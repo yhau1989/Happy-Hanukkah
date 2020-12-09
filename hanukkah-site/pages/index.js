@@ -1,17 +1,19 @@
-import loadable from "@loadable/component";
+//import loadable from "@loadable/component";
 import React, { useEffect } from "react";
 //import styles from "../styles/Home.module.css";
 import { useAuth } from "../utils/auth";
 import { useRouter } from "next/router";
-// import MainIndex from "../components/mainIndex"
-// import BannerIntro from "../components/bannerIntro"
+import MainIndex from "../components/mainIndex"
+import BannerIntro from "../components/bannerIntro"
 import { getDayHoliday } from "../utils/holiday"
 
+import OtherComponentFamily from "../components/family"
+import OtherComponentFooter from "../components/footer"
 
-const OtherComponentFamily = loadable(() => import("../components/family"));
-const OtherComponentFooter = loadable(() => import("../components/footer"));
-const MyMainIndex = loadable(() => import("../components/mainIndex"));
-const MyBannerIntro = loadable(() => import("../components/bannerIntro"));
+
+// const OtherComponentFamily = loadable(() => import("../components/family"));
+// const OtherComponentFooter = loadable(() => import("../components/footer"));
+
 
 export default function Home() {
   const auth = useAuth();
@@ -88,12 +90,12 @@ export default function Home() {
           {(locale == "en") ? "Continue with Google" : "Ingresa con Google" }
         </div>
       </div>
-      <MyMainIndex lenguage={locale} />
+      <MainIndex lenguage={locale} />
       <div className="my-animate-bounce w-full sm:w-3/4 md:w-3/4 lg:w-2/3 xl:w-3/5 my-16">
         <OtherComponentFamily />
       </div>
 
-      <MyBannerIntro lenguage={locale} />
+      <BannerIntro lenguage={locale} />
 
       <OtherComponentFooter />
     </div>

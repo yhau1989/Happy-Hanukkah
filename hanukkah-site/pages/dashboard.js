@@ -1,4 +1,4 @@
-import loadable from "@loadable/component"
+// import loadable from "@loadable/component"
 import React, { useEffect, useState } from "react"
 //import styles from "../styles/Home.module.css"
 import { useAuth } from "../utils/auth"
@@ -8,8 +8,9 @@ import TopMenu from "../components/topmenu"
 import Hanukia from "../components/hanukia"
 import {BrajaOne, BrajaTow, BrajaThree, Neherot} from "../components/bendiciones"
 import Link from "next/link"
+import OtherComponentFooter from "../components/footer"
 
-const OtherComponentFooter = loadable(() => import("../components/footer"));
+// const OtherComponentFooter = loadable(() => import("../components/footer"));
 
 export default function asyncDashboard() {
   const auth = useAuth();
