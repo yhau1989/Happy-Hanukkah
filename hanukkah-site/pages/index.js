@@ -2,22 +2,15 @@ import React, { useEffect} from "react"
 import { useAuth } from "../utils/auth"
 import { useRouter } from "next/router"
 import { getDayHoliday } from "../utils/holiday"
-import loadable from '@loadable/component'
-// import dynamic from 'next/dynamic'
-// import MainIndex from "../components/mainIndex"
-// import BannerIntro from "../components/bannerIntro"
-// import OtherComponentFamily from "../components/family"
-// import OtherComponentFooter from "../components/footer"
+import MainIndex from "../components/mainIndex"
+import BannerIntro from "../components/bannerIntro"
+import OtherComponentFamily from "../components/family"
+import OtherComponentFooter from "../components/footer"
 
-// const MainIndex = dynamic(() => import('../components/mainIndex'))
-// const BannerIntro = dynamic(() => import('../components/bannerIntro'))
-// const OtherComponentFamily = dynamic(() => import('../components/family'))
-// const OtherComponentFooter = dynamic(() => import('../components/footer'))
 
-const MainIndex = loadable(() => import('../components/mainIndex'))
-const BannerIntro = loadable(() => import('../components/bannerIntro'))
-const OtherComponentFamily = loadable(() => import('../components/family'))
-const OtherComponentFooter = loadable(() => import('../components/footer'))
+
+
+
 
 export default function Home() {
   const auth = useAuth();
