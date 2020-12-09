@@ -1,10 +1,26 @@
 import Link from "next/link";
 import Image from 'next/image'
+import {isIE, isSafari} from 'react-device-detect';
 
 
 export default function BannerIntro(params) {
     const {lenguage} = params
 
+    const bannerImgEn = () => {
+      const img = (isIE || isSafari)
+      ? 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606799084/happy-hanukkah/maxresdefault_wboyia.jpg'
+      : 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606799084/happy-hanukkah/maxresdefault_wboyia.webp'
+
+      return <Image src={img} alt="What is Hanukkah?" height={700} width={1200} />
+    }
+
+    const bannerImgEs = () => {
+      const r = isIE
+      const g = isSafari
+      const img2 = (g) ? 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.jpg' : 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.webp'
+      return <Image src={img2} alt={`Que es Januca? isSafari:${g} - isIE:${r}`} height={700} width={1200} />
+    }
+ 
 
     if(lenguage == "en")
     {
@@ -16,15 +32,16 @@ export default function BannerIntro(params) {
             rel="noopener noreferrer"
             aria-label="What is Hanukkah?"
           >
+            {bannerImgEn()}
 
-          <Image
+          {/* <Image
                   src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606799084/happy-hanukkah/maxresdefault_wboyia.jpg"
                   alt="What is Hanukkah?"
                   height={700}
                   width={1200}
                   
 
-                />
+                /> */}
             {/* <img
               src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606799084/happy-hanukkah/maxresdefault_wboyia.webp"
               alt="What is Hanukkah?"
@@ -64,14 +81,15 @@ export default function BannerIntro(params) {
             rel="noopener noreferrer"
             aria-label="Que es Januca?"
           >
-            <Image
+            {bannerImgEs()}
+            {/* <Image
                   src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.jpg"
                   alt="Que es Januca?"
                   height={700}
                   width={1200}
                   
 
-                />
+                /> */}
             {/* <img
               src="https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.webp"
               alt="Que es Januca?"
