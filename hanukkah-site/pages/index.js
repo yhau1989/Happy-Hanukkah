@@ -7,6 +7,7 @@ import MainIndex from "../components/mainIndex"
 import BannerIntro from "../components/bannerIntro"
 import { getDayHoliday } from "../utils/holiday"
 
+
 const OtherComponentFamily = loadable(() => import("../components/family"));
 const OtherComponentFooter = loadable(() => import("../components/footer"));
 
@@ -14,6 +15,7 @@ export default function Home() {
   const auth = useAuth();
   const router = useRouter();
   const { locale } = router
+  
 
   useEffect(() => {
     evaluateState(auth);
@@ -23,11 +25,12 @@ export default function Home() {
     if (usr?.loading === false && usr?.user != null && usr?.user != false) {
       router.replace("dashboard");
     }
+    
   };
 
   return (
     <div id="container" className={styles.container}>
-      <div className="font_ADaughter-title">{getDayHoliday(new Date)}</div>
+      <div className="font_ADaughter-title">{getDayHoliday(new Date)} </div>
       <div
         id="logo"
         width="381"

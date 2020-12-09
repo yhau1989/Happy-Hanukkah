@@ -1,31 +1,26 @@
 import Link from "next/link";
 import Image from 'next/image'
-import {isChrome, isFirefox, browserName} from 'react-device-detect';
+import useDeviceDetect from "../utils/useDeviceDetect";
+
 
 
 export default function BannerIntro(params) {
     const {lenguage} = params
+    const { isModerWeb } = useDeviceDetect();
 
     const bannerImgEn = () => {
-      let img = (isChrome || isFirefox)
+      let img = (isModerWeb)
       ? 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606799084/happy-hanukkah/maxresdefault_wboyia.webp'
       : 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606799084/happy-hanukkah/maxresdefault_wboyia.jpg'
       return <Image src={img} alt="What is Hanukkah?" height={700} width={1200} />
     }
-
-    const bannerImgEs = () => {
-      // console.log(`isSafari:${isSafari}`)
-      // console.log(`isIE:${isIE}`)
-      // console.log(`isChrome:${isChrome}`)
-      // console.log(`isFirefox:${isFirefox}`)
-      // console.log(`browserName:${browserName}`)
-      
-      let img2 = (isChrome || isFirefox)
+    
+    const bannerImgEs = () => {      
+      let img2 = (isModerWeb)
       ? 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/q_auto:best/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.webp'
       : 'https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1606213496/happy-hanukkah/maxresdefault_ogbxpu.jpg'
-      return <Image src={img2} alt= {`Que es Januca? browserName:${browserName}`} height={700} width={1200} />
-    }
- 
+      return <Image src={img2} alt="Que es Januca" height={700} width={1200} />
+    } 
 
     if(lenguage == "en")
     {
