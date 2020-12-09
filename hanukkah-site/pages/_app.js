@@ -5,7 +5,6 @@ import {seoBilingue } from "../utils/seo"
 import GoogleFonts from "next-google-fonts";
 
 function MyApp({ Component, pageProps }) {
-
   const seoDes = seoBilingue()
   
   return (
