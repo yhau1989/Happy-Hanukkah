@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="twitter:description" content={seoDes} />
         <meta property="twitter:image" content="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1605853375/happy-hanukkah/Group_1_zscbag.png"></meta>
         <style>
-        {`html,
+        {/* {`html,
           body {
             padding: 0;
             margin: 0;
@@ -71,7 +71,7 @@ function MyApp({ Component, pageProps }) {
             src: url(/fonts/DPEtYwqExx0AWHX5DR4EXP_TsH8i.woff2) format('woff2');
             unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
           }
-        `}
+        `} */}
         </style>
         <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
