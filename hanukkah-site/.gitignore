@@ -14,7 +14,7 @@
 
 # production
 /build
-/public/fonts
+
 
 # misc
 .DS_Store

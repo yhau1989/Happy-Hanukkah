@@ -2,14 +2,14 @@ import '../styles/site.css'
 import { AuthProvider } from '../utils/auth'
 import Head from "next/head"
 import {seoBilingue } from "../utils/seo"
-import GoogleFonts from "next-google-fonts";
+// import GoogleFonts from "next-google-fonts";
 
 function MyApp({ Component, pageProps }) {
   const seoDes = seoBilingue()
   
   return (
     <>
-      <GoogleFonts href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Rock+Salt&family=Varela&display=swap" />
+      {/* <GoogleFonts href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Rock+Salt&family=Varela&display=swap" /> */}
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="twitter:description" content={seoDes} />
         <meta property="twitter:image" content="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1605853375/happy-hanukkah/Group_1_zscbag.png"></meta>
         
-        {/* <style>
+         <style>
         {`html,
           body {
             padding: 0;
@@ -74,7 +74,7 @@ function MyApp({ Component, pageProps }) {
             unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
           }
         `}
-        </style> */}
+        </style>
         <scrip async src="https://cdn.splitbee.io/sb.js" />
       </Head>
       <AuthProvider>
