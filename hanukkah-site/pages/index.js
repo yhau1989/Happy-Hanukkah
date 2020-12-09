@@ -10,7 +10,7 @@ import { getDayHoliday } from "../utils/holiday"
 
 const OtherComponentFamily = loadable(() => import("../components/family"));
 const OtherComponentFooter = loadable(() => import("../components/footer"));
-const MyMainIndex = loadable(() => import("../components/MainIndex"));
+const MyMainIndex = loadable(() => import("../components/mainIndex"));
 const MyBannerIntro = loadable(() => import("../components/bannerIntro"));
 
 export default function Home() {
