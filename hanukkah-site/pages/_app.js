@@ -75,7 +75,7 @@ function MyApp({ Component, pageProps }) {
           }
         `}
         </style>
-        <scrip async src="https://cdn.splitbee.io/sb.js" />
+        <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
       <AuthProvider>
         <Component {...pageProps} />
