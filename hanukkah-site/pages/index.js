@@ -7,11 +7,6 @@ import BannerIntro from "../components/bannerIntro"
 import OtherComponentFamily from "../components/family"
 import OtherComponentFooter from "../components/footer"
 
-
-
-
-
-
 export default function Home() {
   const auth = useAuth();
   const router = useRouter();
@@ -30,7 +25,7 @@ export default function Home() {
 
   return (
     <div id="container" className="container"> 
-      <div className="font_ADaughter-title">{getDayHoliday(new Date)} </div>
+      <div className="font_ADaughter-title">Hanukkah {getDayHoliday(new Date)} </div>
       <div
         id="logo"
         width="381"

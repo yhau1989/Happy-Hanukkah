@@ -96,7 +96,7 @@ export const BrajaTow = (params) => {
 
 export const BrajaThree = (params) => {
 
-  if(IsFirstDay())
+  if(IsFirstDay(new Date))
   {
     return (
       <div id="brjaThree" className="my-8">
