@@ -2,9 +2,9 @@
 import { useRouter } from "next/router";
 
 const holidayHanukkah = {
-    dayStar: 11,
+    dayStar: 10,
     month: 11,
-    dayEnd: 18,
+    dayEnd: 17,
     hoursBreakStart: 18,
     year : 2020,
     dateFullIni : new Date(2020, 11, 10, 18)
@@ -24,11 +24,11 @@ const validateDateTime = clientDate =>
     {
         if((parseInt(clientDate.getMonth()) <= holidayHanukkah.month) && (parseInt(clientDate.getFullYear()) == holidayHanukkah.year)) 
         {
-            if((parseInt(clientDate.getDate()) >= holidayHanukkah.dayStar) && parseInt(clientDate.getDate()) <= holidayHanukkah.dayEnd && (parseInt(clientDate.getHours()) >= holidayHanukkah.hoursBreakStart))
+            if((parseInt(clientDate.getDate()) >= holidayHanukkah.dayStar) && parseInt(clientDate.getDate()) <= holidayHanukkah.dayEnd )
             {
                 return 1 //fecha valida desde la primer noche
             }
-            else (parseInt(clientDate.getDate() <= (holidayHanukkah.dayStar - 1)) && (parseInt(clientDate.getDate()) <= holidayHanukkah.dayEnd) && (parseInt(clientDate.getHours()) >= holidayHanukkah.hoursBreakStart))
+            else (parseInt(clientDate.getDate() <= (holidayHanukkah.dayStar - 1)) && (parseInt(clientDate.getDate()) <= holidayHanukkah.dayEnd))
             {
                 return 2 //fecha valida desde la diaspora 
             }
@@ -53,7 +53,7 @@ export const IsFirstDay = clientDate => {
     const validDay = validateDateTime(clientDate)
     if(validDay == 1)
     {
-        const dia =  (parseInt(clientDate.getDate()) - holidayHanukkah.getDate()) + 1 
+        const dia =  (parseInt(clientDate.getDate()) - holidayHanukkah.dayStar) + 1 
         return (dia == 1) ? true : false 
     }
 }
@@ -64,10 +64,11 @@ export const getDayHoliday = clientDate =>
     const router2 = useRouter();
     const { locale } = router2 
     const validDay = validateDateTime(clientDate)
+
     if(validDay == 1)
     {
-        const dia = (parseInt(clientDate.getDate()) - holidayHanukkah.getDate()) + 1 
-        return <span> {(locale == "en") ? 'Day' : 'Día'} {dia}</span>
+        const dia = (parseInt(clientDate.getDate()) - holidayHanukkah.dayStar) + 1 
+        return <span> {(locale == "en") ? 'Day:' : 'Día:'} {dia}</span>
     }
     if(validDay == 2)
     {
