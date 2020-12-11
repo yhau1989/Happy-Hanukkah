@@ -31173,7 +31173,7 @@ video {
   --darkModeBackground: #16004a;
 }
 
-.container {
+.mycontainer {
   /* min-height: 100vh;  */
   padding: 0 0.5rem;
   display: flex;

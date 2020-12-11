@@ -24,7 +24,7 @@ export default function Home() {
   };
 
   return (
-    <div id="container" className="container"> 
+    <div id="container" className="mycontainer"> 
       <div className="font_ADaughter-title">Hanukkah {getDayHoliday(new Date)} </div>
       <div
         id="logo"
