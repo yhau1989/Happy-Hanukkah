@@ -18,6 +18,7 @@ const DATE_UNITS = [
 ];
 
 const validateDateTime = (clientDate) => {
+  
   if (
     clientDate != null &&
     Object.prototype.toString.call(clientDate) == "[object Date]"
@@ -31,11 +32,14 @@ const validateDateTime = (clientDate) => {
         parseInt(clientDate.getDate()) <= holidayHanukkah.dayEnd
       ) {
         return 1; //fecha valida desde la primer noche
-      } else
-        parseInt(clientDate.getDate() <= holidayHanukkah.dayStar - 1) &&
-          parseInt(clientDate.getDate()) <= holidayHanukkah.dayEnd;
+      } else if (
+        parseInt(clientDate.getDate() <= holidayHanukkah.dayStar - 1) && parseInt(clientDate.getDate()) <= holidayHanukkah.dayEnd )
       {
         return 2; //fecha valida desde la diaspora
+      }
+      else
+      {
+        return 4
       }
     } else if (parseInt(clientDate.getFullYear()) == holidayHanukkah.year) {
       return 3; // faltan meses
@@ -60,6 +64,8 @@ export const getDayHoliday = (clientDate) => {
   const { locale } = router2;
   const validDay = validateDateTime(clientDate);
 
+  
+  
   try {
     if (validDay == 1) {
       const dia = parseInt(clientDate.getDate()) - holidayHanukkah.dayStar + 1;
@@ -97,17 +103,22 @@ export const getDayHoliday = (clientDate) => {
         holidayHanukkah.month - 1,
         holidayHanukkah.dayStar
       );
-      const rest = DateIni - clientDate;
+      const rest = (DateIni - clientDate);
+      console.log('rest', rest);
       const { value, unit } = getDateDiff(rest / 1000);
+      console.log('value', value);
+      console.log('unit', unit);
       const rtf = new Intl.RelativeTimeFormat(locale, { style: "short" });
+
+      console.log('rtf', rtf);
 
       const mensaje =
         locale == "en"
-          ? `Hanukkah already happened ${tf.format(
+          ? `Hanukkah already happened ${rtf.format(
               value,
               unit
             )} will be the next Hanukkah`
-          : `Hanukkah ya pasó 😢, ${tf.format(
+          : `Hanukkah ya pasó 😢, ${rtf.format(
               value,
               unit
             )} será la siguiente Hanukkah`;
