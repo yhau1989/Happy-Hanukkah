@@ -9,5 +9,8 @@ module.exports = {
         domains: ['res.cloudinary.com'],
         
       },
+      experimental:{
+          optimizeCss:true
+      }
     
 }
