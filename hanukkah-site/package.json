@@ -14,6 +14,7 @@
   "dependencies": {
     "@loadable/component": "^5.14.1",
     "autoprefixer": "^10.0.2",
+    "critters": "0.0.7",
     "firebase": "^8.0.1",
     "next": "10.0.1",
     "postcss": "^8.1.8",

@@ -104,13 +104,13 @@ export const getDayHoliday = (clientDate) => {
         holidayHanukkah.dayStar
       );
       const rest = (DateIni - clientDate);
-      console.log('rest', rest);
+      // console.log('rest', rest);
       const { value, unit } = getDateDiff(rest / 1000);
-      console.log('value', value);
-      console.log('unit', unit);
+      // console.log('value', value);
+      // console.log('unit', unit);
       const rtf = new Intl.RelativeTimeFormat(locale, { style: "short" });
 
-      console.log('rtf', rtf);
+      // console.log('rtf', rtf);
 
       const mensaje =
         locale == "en"
