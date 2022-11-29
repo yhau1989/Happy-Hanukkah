@@ -1,29 +1,41 @@
-import '../styles/site.css'
-import { AuthProvider } from '../utils/auth'
+import "../styles/site.css"
+import { AuthProvider } from "../utils/auth"
 import Head from "next/head"
-import {seoBilingue } from "../utils/seo"
-
+import { seoBilingue } from "../utils/seo"
 
 function MyApp({ Component, pageProps }) {
   const seoDes = seoBilingue()
-  
-  return (
 
+  return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <title>Happy Hanukkah</title>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#16004a" />
         <meta name="msapplication-TileColor" content="#16004a" />
         <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
         <meta name="theme-color" content="#16004a"></meta>
-        
+
         <meta name="title" content="Happy Hanukkah" />
         <meta name="description" content={seoDes} />
 
@@ -31,16 +43,25 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:url" content="https://happy-hanukkah.vercel.app/" />
         <meta property="og:title" content="Happy Hanukkah" />
         <meta property="og:description" content={seoDes} />
-        <meta property="og:image" content="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1605853375/happy-hanukkah/Group_1_zscbag.png" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1605853375/happy-hanukkah/Group_1_zscbag.png"
+        />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://happy-hanukkah.vercel.app/" />
+        <meta
+          property="twitter:url"
+          content="https://happy-hanukkah.vercel.app/"
+        />
         <meta property="twitter:title" content="Happy Hanukkah" />
         <meta property="twitter:description" content={seoDes} />
-        <meta property="twitter:image" content="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1605853375/happy-hanukkah/Group_1_zscbag.png"></meta>
-        
-         <style>
-        {`html,
+        <meta
+          property="twitter:image"
+          content="https://res.cloudinary.com/software-monkey-ecuador/image/upload/v1605853375/happy-hanukkah/Group_1_zscbag.png"
+        ></meta>
+
+        <style>
+          {`html,
           body {
             padding: 0;
             margin: 0;
@@ -80,9 +101,8 @@ function MyApp({ Component, pageProps }) {
       <AuthProvider>
         <Component {...pageProps} />
       </AuthProvider>
-  </>
+    </>
   )
-  
 }
 
 export default MyApp
