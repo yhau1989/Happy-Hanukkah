@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useContext, createContext } from 'react'
-import Router from 'next/router';
-import firebase from './firebase'
-
+import React, { useState, useEffect, useContext, createContext } from "react"
+import Router from "next/router"
+import firebase from "./firebase"
 
 const authContext = createContext()
 
@@ -13,7 +12,6 @@ export function AuthProvider({ children }) {
 export const useAuth = () => {
   return useContext(authContext)
 }
-
 
 function useProvideAuth() {
   const [user, setUser] = useState(null)
@@ -32,46 +30,45 @@ function useProvideAuth() {
     }
   }
 
-
   const signinWithTwitter = (redirect) => {
-    setLoading(true);
+    setLoading(true)
     return firebase
       .auth()
       .signInWithPopup(new firebase.auth.TwitterAuthProvider())
       .then((response) => {
-        handleUser(response.user);
+        handleUser(response.user)
         if (redirect) {
-          Router.push(redirect);
+          Router.push(redirect)
         }
-      });
-  };
+      })
+  }
 
   const signinWithGoogle = (redirect) => {
-    setLoading(true);
+    setLoading(true)
     return firebase
       .auth()
       .signInWithPopup(new firebase.auth.GoogleAuthProvider())
       .then((response) => {
-        handleUser(response.user);
+        handleUser(response.user)
         if (redirect) {
-          Router.push(redirect);
+          Router.push(redirect)
         }
-      });
-  };
+      })
+  }
 
   const signinWithGitHub = (redirect) => {
-    setLoading(true);
+    setLoading(true)
     return firebase
       .auth()
       .signInWithPopup(new firebase.auth.GithubAuthProvider())
       .then((response) => {
-        handleUser(response.user);
+        handleUser(response.user)
 
         if (redirect) {
-          Router.push(redirect);
+          Router.push(redirect)
         }
-      });
-  };
+      })
+  }
 
   const signout = () => {
     return firebase
@@ -79,7 +76,7 @@ function useProvideAuth() {
       .signOut()
       .then(() => {
         handleUser(false)
-        Router.push('/');
+        Router.push("/")
       })
   }
 

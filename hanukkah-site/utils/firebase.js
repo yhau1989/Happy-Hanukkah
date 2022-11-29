@@ -1,5 +1,5 @@
-import firebase from 'firebase/app'
-import 'firebase/auth'
+import firebase from "firebase/compat/app"
+import "firebase/compat/auth"
 
 if (!firebase.apps.length) {
   firebase.initializeApp({
@@ -8,4 +8,5 @@ if (!firebase.apps.length) {
     projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
   })
 }
+
 export default firebase
